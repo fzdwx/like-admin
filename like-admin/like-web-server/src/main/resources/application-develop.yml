@@ -4,7 +4,7 @@ server:
     accept-count: 1024
     max-threads: 1024
 debug: false
-headImagePath: D:\Java\project\admin\like-admin\like-admi\quasar-sika-design\public\imgs\head\
+headImagePath: D:\Java\project\admin\like-admin-ui\public\imgs\head\
 sika:
   code:
     workspace:
@@ -46,10 +46,11 @@ sika:
       ################### 异常通知 end ############################
 spring:
   rabbitmq:
-    host: 120.78.74.169
+    host: 127.0.0.1
     port: 5672
-    username: rabbitmq
-    password: 123456
+    username: like
+    password: like
+    virtual-host: /like-admin
     publisher-confirms: true
     publisher-returns: true
     listener:
