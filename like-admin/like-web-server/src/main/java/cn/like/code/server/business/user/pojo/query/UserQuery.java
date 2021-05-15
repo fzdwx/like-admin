@@ -59,9 +59,9 @@ public class UserQuery extends BaseStandardQuery implements Serializable {
      */
     protected String avatar;
     /**
-     * token
+     * salt
      */
-    protected String token;
+    protected String salt;
     /**
      * 用户类型：1：游客，2：系统用户
      */

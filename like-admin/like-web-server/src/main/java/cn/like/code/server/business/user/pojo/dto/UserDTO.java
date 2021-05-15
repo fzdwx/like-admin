@@ -59,9 +59,9 @@ public class UserDTO extends BaseStandardDTO implements Serializable {
      */
     private String avatar;
     /**
-     * token
+     * salt
      */
-    private String token;
+    private String salt;
     /**
      * 用户类型：1：游客，2：系统用户
      */

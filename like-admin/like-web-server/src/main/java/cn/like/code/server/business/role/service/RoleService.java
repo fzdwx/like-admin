@@ -1,7 +1,12 @@
 package cn.like.code.server.business.role.service;
 
+import cn.like.code.server.business.role.entity.RoleEntity;
 import cn.like.code.server.business.role.pojo.dto.RoleDTO;
 import com.sika.code.standard.base.service.BaseStandardService;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 
 /**
  * <p>
@@ -13,4 +18,7 @@ import com.sika.code.standard.base.service.BaseStandardService;
  */
 public interface RoleService extends BaseStandardService<RoleDTO> {
 
+    List<RoleEntity> listRoleKeyById(Set<Long> roleIds);
+
+    List<RoleEntity> listRoleNameById(Set<Long> collect);
 }

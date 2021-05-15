@@ -1,5 +1,6 @@
 package cn.like.code.server;
 
+import cn.dev33.satoken.SaManager;
 import com.sika.code.basic.constant.BaseComponentScan;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -19,5 +20,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 public class AdminApplication {
     public static void main(String[] args) {
         SpringApplication.run(AdminApplication.class, args);
+
+        System.out.println("启动成功：sa-token配置如下：" + SaManager.getConfig());
+
     }
 }

@@ -6,7 +6,7 @@ package com.sika.code.standard.auth.constant;
  */
 public class AuthConstant {
     /**
-     * AuthorizationKey --- Authorization
+     * AuthorizationKey --- Authorization token 在header中的名字
      */
     public static final String AUTHORIZATION_KEY = "Authorization";
     /**

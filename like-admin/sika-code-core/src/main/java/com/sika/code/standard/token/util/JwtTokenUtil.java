@@ -5,6 +5,7 @@ import cn.hutool.core.map.MapUtil;
 import com.sika.code.basic.errorcode.BaseErrorCodeEnum;
 import com.sika.code.basic.util.Assert;
 import com.sika.code.exception.BusinessException;
+import com.sika.code.standard.auth.properties.AuthProperties;
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
 
@@ -38,6 +39,7 @@ public class JwtTokenUtil {
      * jwt默认的有效期 --- 7 * 24 * 60 * 60 （秒）--- 7天
      */
     private static final long EXPIRED_DEFAULT = 7 * 24 * 60 * 60;
+    private static final String AUTHORITIES_KEY = "auth";
 
     /**
      * 从token中获取创建时间
@@ -182,7 +184,8 @@ public class JwtTokenUtil {
         String id = MapUtil.getStr(claims, Claims.ID);
 
         JwtBuilder jwtBuilder = Jwts.builder()
-                .setClaims(claims)
+                .claim(AUTHORITIES_KEY, claims)
+                .setIssuer(AuthProperties.iss)
                 .setId(id)
                 .setExpiration(expiration);
         if (secretKey instanceof String) {
@@ -192,5 +195,4 @@ public class JwtTokenUtil {
         }
         return jwtBuilder.compact();
     }
-
 }

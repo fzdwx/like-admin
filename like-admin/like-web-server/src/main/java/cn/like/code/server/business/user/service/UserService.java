@@ -13,4 +13,5 @@ import com.sika.code.standard.base.service.BaseStandardService;
  */
 public interface UserService extends BaseStandardService<UserDTO> {
 
+    boolean checkUserInfo(UserDTO userDTO);
 }

@@ -5,10 +5,14 @@ import cn.like.code.server.business.role.entity.RoleEntity;
 import cn.like.code.server.business.role.mapper.RoleMapper;
 import cn.like.code.server.business.role.pojo.dto.RoleDTO;
 import cn.like.code.server.business.role.service.RoleService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sika.code.standard.base.convert.BaseConvert;
 import com.sika.code.standard.base.service.impl.BaseStandardServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Set;
 
 /**
  * <p>
@@ -27,6 +31,22 @@ public class RoleServiceImpl extends BaseStandardServiceImpl<RoleMapper, RoleEnt
     @Override
     protected BaseConvert<RoleEntity, RoleDTO> convert() {
         return RoleConvert.INSTANCE;
+    }
+
+    @Override
+    public List<RoleEntity> listRoleKeyById(Set<Long> roleIds) {
+        roleMapper.selectList(new QueryWrapper<RoleEntity>()
+                .in("id", roleIds)
+                .select("role_key"));
+        return roleMapper.selectBatchIds(roleIds);
+    }
+
+    @Override
+    public List<RoleEntity> listRoleNameById(Set<Long> roleIds) {
+        roleMapper.selectList(new QueryWrapper<RoleEntity>()
+                .in("id", roleIds)
+                .select("role_name"));
+        return roleMapper.selectBatchIds(roleIds);
     }
 }
 

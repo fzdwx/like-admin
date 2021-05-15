@@ -8,7 +8,6 @@ import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,9 +27,9 @@ public class AuthUtil {
      */
     private static long TOKEN_ID_EXPIRES_IN = AuthConstant.AuthExpiresIn.TOKEN_ID;
     private static final String CLAIM_KEY_ROLES = "roles";
-    private static final String CLAIM_KEY_USER_ID = "userId";
+    public static final String CLAIM_KEY_USER_ID = "userId";
 
-    private static RedisTemplate<String, Object> redisTemplate;
+    // private static RedisTemplate<String, Object> redisTemplate;
     private static HttpSession httpSession;
     private static HttpServletRequest httpServletRequest;
 
@@ -44,10 +43,10 @@ public class AuthUtil {
         AuthUtil.httpServletRequest = httpServletRequest;
     }
 
-    @Autowired
+    /*@Autowired
     public void setRedisTemplate(RedisTemplate<String, Object> redisTemplate) {
         AuthUtil.redisTemplate = redisTemplate;
-    }
+    }*/
 
     /**
      * <p>

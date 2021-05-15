@@ -1,7 +1,10 @@
 package cn.like.code.server.business.userrole.service;
 
+import cn.like.code.server.business.userrole.entity.UserRoleEntity;
 import cn.like.code.server.business.userrole.pojo.dto.UserRoleDTO;
 import com.sika.code.standard.base.service.BaseStandardService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.sika.code.standard.base.service.BaseStandardService;
  */
 public interface UserRoleService extends BaseStandardService<UserRoleDTO> {
 
+    List<UserRoleEntity> listRoleIdByUserId(Long userId);
 }
