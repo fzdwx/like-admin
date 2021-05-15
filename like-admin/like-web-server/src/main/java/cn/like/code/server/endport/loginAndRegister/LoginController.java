@@ -31,8 +31,6 @@ public class LoginController extends BaseStandardController {
     @Autowired
     UserService userService;
 
-
-
     /**
      * 登录
      *
@@ -52,14 +50,13 @@ public class LoginController extends BaseStandardController {
             return fail("用户密码错误:" + username);
         }
 
+        // 调用 satoken 登录当前用户
         StpUtil.setLoginId(user.getId());
 
         SaTokenInfo tokenInfo = StpUtil.getTokenInfo();
 
-
-
         log.info("[login] 用户登录成功:{}", tokenInfo);
-        return success(tokenInfo.getTokenValue());
+        return success(tokenInfo);
     }
 
     /**

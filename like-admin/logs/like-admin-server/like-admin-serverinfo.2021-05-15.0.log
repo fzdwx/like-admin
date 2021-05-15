@@ -1272,3 +1272,329 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:38:57.196 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 20:38:57.196 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":"1e0f9af6-9a56-4242-9f3f-2bce7886ca6c","message":"成功","msgNo":"RMN-02-01-210515203857-000003","success":true}
 2021-05-15 20:38:57.197 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
+2021-05-15 21:35:14.953 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-15 21:35:15.031 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Shutdown initiated...
+2021-05-15 21:35:15.045 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Shutdown completed.
+2021-05-15 22:27:08.957 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 2436 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:27:08.960 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 22:27:12.700 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 22:27:12.704 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 22:27:12.773 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
+2021-05-15 22:27:14.563 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 22:27:14.574 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:27:14.574 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 22:27:14.574 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 22:27:14.672 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 22:27:14.672 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5193 ms
+2021-05-15 22:27:16.936 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 22:27:18.707 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 22:27:22.553 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 22:27:25.452 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 22:27:25.654 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:27:25.669 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 22:27:27.679 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 22:27:27.717 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 21.966 seconds (JVM running for 25.118)
+2021-05-15 22:27:31.128 [RMI TCP Connection(7)-192.168.1.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 22:27:31.128 [RMI TCP Connection(7)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 22:27:31.133 [RMI TCP Connection(7)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2021-05-15 22:27:34.561 [RMI TCP Connection(9)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 22:27:34.731 [RMI TCP Connection(9)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#17f8db6:0/SimpleConnection@720b07e1 [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 3764]
+2021-05-15 22:27:34.840 [RMI TCP Connection(9)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:28:05.849 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:28:05.849 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request To Controller (/auth/login}***************** 
+2021-05-15 22:28:05.850 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Request Parameters  ------------------------
+2021-05-15 22:28:05.850 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:28:05.850 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:28:05.850 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:28:05.907 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:28:05.907 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
+2021-05-15 22:28:05.908 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
+2021-05-15 22:28:05.973 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
+2021-05-15 22:28:05.988 [http-nio-8101-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:28:07.066 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:1097ms】result:"java.lang.reflect.InvocationTargetException:null"(slowQuery)(start:2021-05-15 22:28:05.907, end:2021-05-15 22:28:07.004)
+2021-05-15 22:28:07.066 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
+2021-05-15 22:28:07.066 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
+2021-05-15 22:29:47.889 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 14896 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:29:47.894 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 22:29:53.861 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 22:29:53.867 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 22:29:53.942 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
+2021-05-15 22:29:55.384 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 22:29:55.393 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:29:55.394 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 22:29:55.394 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 22:29:55.503 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 22:29:55.503 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6498 ms
+2021-05-15 22:29:57.771 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 22:29:59.487 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 22:30:02.397 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 22:30:05.349 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 22:30:05.457 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:30:05.470 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 22:30:07.029 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 22:30:07.037 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 24.629 seconds (JVM running for 27.103)
+2021-05-15 22:30:07.671 [RMI TCP Connection(3)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 22:30:07.676 [RMI TCP Connection(4)-192.168.1.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 22:30:07.676 [RMI TCP Connection(4)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 22:30:07.680 [RMI TCP Connection(4)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2021-05-15 22:30:07.724 [RMI TCP Connection(3)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#17f8db6:0/SimpleConnection@48273859 [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 3954]
+2021-05-15 22:30:07.829 [RMI TCP Connection(3)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:31:47.459 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 3260 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:31:47.468 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 22:31:51.938 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 22:31:51.945 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 22:31:52.062 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 0 Redis repository interfaces.
+2021-05-15 22:31:54.889 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 22:31:54.907 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:31:54.909 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 22:31:54.910 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 22:31:55.075 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 22:31:55.075 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6823 ms
+2021-05-15 22:31:58.330 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 22:32:00.478 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 22:32:03.877 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 22:32:06.535 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 22:32:06.661 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:32:06.676 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 22:32:08.083 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 22:32:08.094 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 25.88 seconds (JVM running for 28.731)
+2021-05-15 22:32:08.501 [RMI TCP Connection(7)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 22:32:08.506 [RMI TCP Connection(8)-192.168.1.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 22:32:08.506 [RMI TCP Connection(8)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 22:32:08.509 [RMI TCP Connection(8)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-05-15 22:32:08.556 [RMI TCP Connection(7)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1a89414e:0/SimpleConnection@425ffe26 [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 4260]
+2021-05-15 22:32:08.613 [RMI TCP Connection(7)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:32:08.864 [RMI TCP Connection(7)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-05-15 22:32:24.659 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:32:24.659 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request To Controller (/auth/login}***************** 
+2021-05-15 22:32:24.659 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Request Parameters  ------------------------
+2021-05-15 22:32:24.660 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:32:24.660 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:32:24.660 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:32:24.736 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:32:24.736 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
+2021-05-15 22:32:24.737 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
+2021-05-15 22:32:24.816 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
+2021-05-15 22:32:24.987 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:175ms】(start:2021-05-15 22:32:24.736, end:2021-05-15 22:32:24.911)
+2021-05-15 22:32:24.987 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
+2021-05-15 22:32:24.987 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
+2021-05-15 22:32:25.272 [http-nio-8101-exec-2] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=bcbb877f-85e7-4d89-ad9e-50414ea70d75, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:32:25.277 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
+2021-05-15 22:32:25.307 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"bcbb877f-85e7-4d89-ad9e-50414ea70d75"},"message":"成功","msgNo":"RMN-02-01-210515223225-000001","success":true}
+2021-05-15 22:32:25.307 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
+2021-05-15 22:36:40.401 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:36:40.401 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request To Controller (/auth/login}***************** 
+2021-05-15 22:36:40.401 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Request Parameters  ------------------------
+2021-05-15 22:36:40.401 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:36:40.401 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:36:40.401 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:36:40.402 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:36:40.402 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
+2021-05-15 22:36:40.402 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
+2021-05-15 22:36:40.403 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
+2021-05-15 22:36:40.407 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:5ms】(start:2021-05-15 22:36:40.402, end:2021-05-15 22:36:40.407)
+2021-05-15 22:36:40.407 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
+2021-05-15 22:36:40.408 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
+2021-05-15 22:36:40.630 [http-nio-8101-exec-5] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=c0909a3e-e90e-4358-9f0d-8a63f8c76ace, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:36:40.631 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
+2021-05-15 22:36:40.631 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"c0909a3e-e90e-4358-9f0d-8a63f8c76ace"},"message":"成功","msgNo":"RMN-02-01-210515223640-000002","success":true}
+2021-05-15 22:36:40.631 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
+2021-05-15 22:37:08.544 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 16536 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:37:08.551 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 22:37:12.448 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 22:37:12.456 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 22:37:12.544 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 0 Redis repository interfaces.
+2021-05-15 22:37:14.348 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 22:37:14.359 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:37:14.360 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 22:37:14.360 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 22:37:14.469 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 22:37:14.469 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4896 ms
+2021-05-15 22:37:16.536 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 22:37:18.000 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 22:37:21.202 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 22:37:23.434 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 22:37:23.549 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:37:23.562 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 22:37:24.943 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 22:37:24.952 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 22.999 seconds (JVM running for 28.472)
+2021-05-15 22:37:25.565 [RMI TCP Connection(1)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 22:37:25.618 [RMI TCP Connection(1)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#5d37aa0f:0/SimpleConnection@664903ab [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 4890]
+2021-05-15 22:37:25.911 [RMI TCP Connection(1)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:37:26.373 [RMI TCP Connection(1)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-05-15 22:37:27.426 [RMI TCP Connection(3)-192.168.1.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 22:37:27.426 [RMI TCP Connection(3)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 22:37:27.428 [RMI TCP Connection(3)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-05-15 22:37:35.824 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:37:35.824 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request To Controller (/auth/login}***************** 
+2021-05-15 22:37:35.824 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Request Parameters  ------------------------
+2021-05-15 22:37:35.824 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:37:35.824 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:37:35.824 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:37:35.874 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:37:35.874 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ start_logger:sql日志记录:start_logger ]   ===============
+2021-05-15 22:37:35.874 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
+2021-05-15 22:37:35.959 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】 SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
+2021-05-15 22:37:36.245 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:215ms】(start:2021-05-15 22:37:35.873, end:2021-05-15 22:37:36.088)
+2021-05-15 22:37:36.246 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ end_logger:sql日志记录:end_logger ]   ===============
+2021-05-15 22:37:36.246 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
+2021-05-15 22:37:36.585 [http-nio-8101-exec-2] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=47ff2335-ac39-4c45-af12-84634049d026, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:37:36.589 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
+2021-05-15 22:37:36.627 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"47ff2335-ac39-4c45-af12-84634049d026"},"message":"成功","msgNo":"RMN-02-01-210515223736-000001","success":true}
+2021-05-15 22:37:36.627 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
+2021-05-15 22:38:53.286 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:38:53.286 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request To Controller (/auth/login}***************** 
+2021-05-15 22:38:53.286 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Request Parameters  ------------------------
+2021-05-15 22:38:53.286 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:38:53.286 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:38:53.286 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:38:53.287 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:38:53.287 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ start_logger:sql日志记录:start_logger ]   ===============
+2021-05-15 22:38:53.287 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
+2021-05-15 22:38:53.288 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】 SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
+2021-05-15 22:38:53.295 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:8ms】(start:2021-05-15 22:38:53.287, end:2021-05-15 22:38:53.295)
+2021-05-15 22:38:53.295 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ end_logger:sql日志记录:end_logger ]   ===============
+2021-05-15 22:38:53.295 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
+2021-05-15 22:38:53.535 [http-nio-8101-exec-5] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=5089cf3a-3cd5-4392-a102-0c2c16205826, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:38:53.537 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
+2021-05-15 22:38:53.537 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"5089cf3a-3cd5-4392-a102-0c2c16205826"},"message":"成功","msgNo":"RMN-02-01-210515223853-000002","success":true}
+2021-05-15 22:38:53.537 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
+2021-05-15 22:40:23.454 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 12356 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:40:23.460 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 22:40:26.116 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 22:40:26.119 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 22:40:26.170 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2021-05-15 22:40:27.347 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 22:40:27.355 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:40:27.355 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 22:40:27.355 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 22:40:27.450 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 22:40:27.450 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3491 ms
+2021-05-15 22:40:29.194 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 22:40:30.567 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 22:40:33.241 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 22:40:35.517 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 22:40:35.699 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:40:35.724 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 22:40:37.226 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 22:40:37.235 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 17.403 seconds (JVM running for 21.326)
+2021-05-15 22:40:37.528 [RMI TCP Connection(4)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 22:40:37.531 [RMI TCP Connection(3)-192.168.1.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 22:40:37.532 [RMI TCP Connection(3)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 22:40:37.534 [RMI TCP Connection(3)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-05-15 22:40:37.568 [RMI TCP Connection(4)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#5c1c9881:0/SimpleConnection@78aca3f5 [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 5259]
+2021-05-15 22:40:37.611 [RMI TCP Connection(4)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:40:37.970 [RMI TCP Connection(4)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-05-15 22:41:11.664 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:41:11.664 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request To Controller (/auth/login}***************** 
+2021-05-15 22:41:11.664 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Request Parameters  ------------------------
+2021-05-15 22:41:11.665 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:41:11.665 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:41:11.665 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:41:11.723 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:41:11.723 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ start_logger:sql日志记录:start_logger ]   ===============
+2021-05-15 22:41:11.723 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
+2021-05-15 22:41:11.816 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】 SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
+2021-05-15 22:41:11.989 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:163ms】(start:2021-05-15 22:41:11.723, end:2021-05-15 22:41:11.886)
+2021-05-15 22:41:11.989 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ end_logger:sql日志记录:end_logger ]   ===============
+2021-05-15 22:41:11.989 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
+2021-05-15 22:41:12.397 [http-nio-8101-exec-2] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=794da355-5192-45f5-8ed0-b8ffc4d233b6, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:41:12.402 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
+2021-05-15 22:41:12.424 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"794da355-5192-45f5-8ed0-b8ffc4d233b6"},"message":"成功","msgNo":"RMN-02-01-210515224112-000001","success":true}
+2021-05-15 22:41:12.424 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
+2021-05-15 22:47:48.598 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 11320 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:47:48.603 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 22:47:52.195 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 22:47:52.200 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 22:47:52.266 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2021-05-15 22:47:53.926 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 22:47:53.936 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:47:53.936 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 22:47:53.937 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 22:47:54.037 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 22:47:54.037 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4901 ms
+2021-05-15 22:47:55.950 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 22:47:57.466 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 22:48:00.004 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 22:48:02.340 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 22:48:02.450 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:48:02.462 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 22:48:03.846 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 22:48:03.855 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 19.348 seconds (JVM running for 23.05)
+2021-05-15 22:48:04.392 [RMI TCP Connection(3)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 22:48:04.432 [RMI TCP Connection(3)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1c2096c6:0/SimpleConnection@6c1e82ac [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 5949]
+2021-05-15 22:48:04.477 [RMI TCP Connection(3)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:48:04.708 [RMI TCP Connection(3)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-05-15 22:48:05.359 [RMI TCP Connection(5)-192.168.1.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 22:48:05.359 [RMI TCP Connection(5)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 22:48:05.361 [RMI TCP Connection(5)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-05-15 22:49:08.528 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 1920 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:49:08.532 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 22:49:13.006 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 22:49:13.010 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 22:49:13.053 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2021-05-15 22:49:14.191 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 22:49:14.201 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:49:14.202 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 22:49:14.202 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 22:49:14.300 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 22:49:14.301 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5142 ms
+2021-05-15 22:49:16.123 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 22:49:17.548 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 22:49:20.228 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 22:49:22.411 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 22:49:22.522 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:49:22.533 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 22:49:24.002 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 22:49:24.031 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 19.467 seconds (JVM running for 22.643)
+2021-05-15 22:49:24.524 [RMI TCP Connection(3)-192.168.1.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 22:49:24.524 [RMI TCP Connection(3)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 22:49:24.528 [RMI TCP Connection(3)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-05-15 22:49:25.576 [RMI TCP Connection(5)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 22:49:25.610 [RMI TCP Connection(5)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1c2096c6:0/SimpleConnection@6ce2d9a5 [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 6128]
+2021-05-15 22:49:25.644 [RMI TCP Connection(5)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:49:25.838 [RMI TCP Connection(5)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-05-15 22:50:22.800 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 10488 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:50:22.804 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 22:50:25.164 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 22:50:25.169 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 22:50:25.219 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2021-05-15 22:50:27.234 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 22:50:27.244 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:50:27.245 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 22:50:27.245 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 22:50:27.370 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 22:50:27.370 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4098 ms
+2021-05-15 22:50:29.068 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 22:50:30.490 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 22:50:33.018 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 22:50:35.186 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 22:50:35.303 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:50:35.317 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 22:50:36.764 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 22:50:36.774 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 16.716 seconds (JVM running for 19.029)
+2021-05-15 22:50:37.335 [RMI TCP Connection(1)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 22:50:37.376 [RMI TCP Connection(1)-192.168.1.1] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#71fb8301:0/SimpleConnection@1db4f6d1 [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 6304]
+2021-05-15 22:50:37.423 [RMI TCP Connection(1)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:50:37.715 [RMI TCP Connection(1)-192.168.1.1] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-05-15 22:50:38.756 [RMI TCP Connection(4)-192.168.1.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 22:50:38.756 [RMI TCP Connection(4)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 22:50:38.758 [RMI TCP Connection(4)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms

@@ -81,7 +81,7 @@ public class SqlLogInterceptor implements Interceptor {
             if (sqlLogFlag) {
                 try {
                     log.info("\r");
-                    log.info("**********************************************   start_logger:sql日志记录:start_logger   **********************************************");
+                    log.info("===============  [ start_logger:sql日志记录:start_logger ]   ===============");
                     boolean ddlFlag = getDdlFlag();
                     String sqlLog1 = getExecuteMethodLog(ddlFlag, sqlId);
                     log.info(sqlLog1);
@@ -104,7 +104,7 @@ public class SqlLogInterceptor implements Interceptor {
                     clearSqlLogContext();
                     String sqlLog3 = getExecuteCostLog(slowQuery, startTime, endTime, cost, result);
                     log.info(sqlLog3);
-                    log.info("**********************************************   end_logger:sql日志记录:end_logger   **********************************************");
+                    log.info("===============  [ end_logger:sql日志记录:end_logger ]   ===============");
                     log.info("\r\n");
                 }
             }
