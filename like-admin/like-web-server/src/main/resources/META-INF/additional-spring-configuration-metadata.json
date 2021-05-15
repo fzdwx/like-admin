@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "sika.code.jdbc.fire",
+      "type": "java.lang.String",
+      "description": "jdbc开关."
+    },
+    {
+      "name": "sika.code.redis.fire",
+      "type": "java.lang.String",
+      "description": "redis开关."
+    },
+    {
+      "name": "sika.code.log.controller.fire",
+      "type": "java.lang.String",
+      "description": "日志controller开关."
+    },
+    {
+      "name": "mybatis.mapper-locations",
+      "type": "java.lang.String",
+      "description": "mybaits的mapper 存放地址"
+    }
+  ]
+}
