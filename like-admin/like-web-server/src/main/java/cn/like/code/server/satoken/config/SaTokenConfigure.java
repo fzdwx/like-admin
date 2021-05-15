@@ -5,6 +5,8 @@ import cn.dev33.satoken.filter.SaServletFilter;
 import cn.dev33.satoken.interceptor.SaRouteInterceptor;
 import cn.dev33.satoken.router.SaRouterUtil;
 import cn.dev33.satoken.stp.StpUtil;
+import com.sika.code.common.json.util.JSONUtil;
+import com.sika.code.result.generator.ResultGenerator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -68,8 +70,6 @@ public class SaTokenConfigure implements WebMvcConfigurer {
 
                 // 认证函数: 每次请求执行
                 .setAuth(r -> {
-                    System.out.println("==============[ 进入用户权限认证 ]==============");
-
                     // 登录验证 -- 拦截所有路由，并排除/user/doLogin 用于开放登录
                     // 登录验证 -- 排除多个路径
                     SaRouterUtil.match(
@@ -95,8 +95,8 @@ public class SaTokenConfigure implements WebMvcConfigurer {
 
                 // 异常处理函数：每次认证函数发生异常时执行此函数
                 .setError(e -> {
-                    System.out.println("==============[ 认证发生异常 ]==============");
-                    return e.getMessage();
+
+                    return JSONUtil.toJSONString(new ResultGenerator().generateResultError(e.getMessage()));
                 })
 
                 // 前置函数：在每次认证函数之前执行

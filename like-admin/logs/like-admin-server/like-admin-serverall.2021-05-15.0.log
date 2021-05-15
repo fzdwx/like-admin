@@ -10483,3 +10483,248 @@ Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieva
 2021-05-15 22:50:38.756 [RMI TCP Connection(4)-192.168.1.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-05-15 22:50:38.756 [RMI TCP Connection(4)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2021-05-15 22:50:38.758 [RMI TCP Connection(4)-192.168.1.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-05-15 22:52:01.489 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:52:01.489 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request To Controller (/auth/login}***************** 
+2021-05-15 22:52:01.489 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Request Parameters  ------------------------
+2021-05-15 22:52:01.489 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:52:01.489 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:52:01.489 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:52:01.556 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:52:01.556 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ start_logger:sql日志记录:start_logger ]   ===============
+2021-05-15 22:52:01.557 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
+2021-05-15 22:52:01.643 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
+2021-05-15 22:52:01.826 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:157ms】(start:2021-05-15 22:52:01.556, end:2021-05-15 22:52:01.713)
+2021-05-15 22:52:01.827 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ end_logger:sql日志记录:end_logger ]   ===============
+2021-05-15 22:52:01.827 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
+2021-05-15 22:52:02.201 [http-nio-8101-exec-2] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=cb442ac3-ca8e-45b7-b821-1cfe7b2c18ec, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:52:02.207 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
+2021-05-15 22:52:02.232 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"cb442ac3-ca8e-45b7-b821-1cfe7b2c18ec"},"message":"成功","msgNo":"RMN-02-01-210515225202-000001","success":true}
+2021-05-15 22:52:02.232 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
+2021-05-15 22:52:09.817 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:52:09.817 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request To Controller (/auth/login}***************** 
+2021-05-15 22:52:09.817 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Request Parameters  ------------------------
+2021-05-15 22:52:09.817 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:52:09.817 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
+2021-05-15 22:52:09.818 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
+
+2021-05-15 22:52:09.818 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:52:09.818 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ start_logger:sql日志记录:start_logger ]   ===============
+2021-05-15 22:52:09.818 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
+2021-05-15 22:52:09.821 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
+2021-05-15 22:52:09.837 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:19ms】(start:2021-05-15 22:52:09.818, end:2021-05-15 22:52:09.837)
+2021-05-15 22:52:09.837 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ end_logger:sql日志记录:end_logger ]   ===============
+2021-05-15 22:52:09.837 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
+2021-05-15 22:52:10.335 [http-nio-8101-exec-3] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=4d4ec7b0-7c35-46ea-9621-626b9406bc43, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:52:10.337 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
+2021-05-15 22:52:10.337 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"4d4ec7b0-7c35-46ea-9621-626b9406bc43"},"message":"成功","msgNo":"RMN-02-01-210515225210-000002","success":true}
+2021-05-15 22:52:10.337 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
+2021-05-15 22:54:04.825 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 2724 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:54:04.828 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 22:54:07.952 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 22:54:07.954 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 22:54:07.993 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2021-05-15 22:54:09.260 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 22:54:09.271 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:54:09.272 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 22:54:09.272 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 22:54:09.378 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 22:54:09.379 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3858 ms
+2021-05-15 22:54:12.105 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 22:54:14.943 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 22:54:24.113 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 22:54:27.594 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-05-15 22:54:27.648 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 22:54:27.814 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:54:27.839 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 22:54:30.049 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-05-15 22:54:30.677 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 22:54:30.693 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 30.319 seconds (JVM running for 32.841)
+2021-05-15 22:54:32.500 [RMI TCP Connection(6)-192.168.42.30] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 22:54:32.508 [RMI TCP Connection(5)-192.168.42.30] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 22:54:32.508 [RMI TCP Connection(5)-192.168.42.30] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 22:54:32.516 [RMI TCP Connection(5)-192.168.42.30] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2021-05-15 22:54:32.632 [RMI TCP Connection(6)-192.168.42.30] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#68a5aadd:0/SimpleConnection@2487b50d [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 6804]
+2021-05-15 22:54:32.918 [RMI TCP Connection(6)-192.168.42.30] WARN  com.zaxxer.hikari.HikariConfig - DatebookHikariCP - idleTimeout is close to or more than maxLifetime, disabling it.
+2021-05-15 22:54:32.918 [RMI TCP Connection(6)-192.168.42.30] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:54:33.428 [http-nio-8101-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+cn.dev33.satoken.exception.SaTokenException: cn.dev33.satoken.exception.NotLoginException: 未提供token
+	at cn.dev33.satoken.filter.SaServletFilter.lambda$new$1(SaServletFilter.java:109)
+	at cn.dev33.satoken.filter.SaServletFilter.doFilter(SaServletFilter.java:163)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:141)
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:82)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.sika.code.standard.request.filter.HttpRequestFilter.doFilter(HttpRequestFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.sika.code.common.threadlocal.filter.ClearThreadLocalFilter.doFilter(ClearThreadLocalFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: cn.dev33.satoken.exception.NotLoginException: 未提供token
+	at cn.dev33.satoken.exception.NotLoginException.newInstance(NotLoginException.java:121)
+	at cn.dev33.satoken.stp.StpLogic.getLoginId(StpLogic.java:447)
+	at cn.dev33.satoken.stp.StpLogic.checkLogin(StpLogic.java:432)
+	at cn.dev33.satoken.stp.StpUtil.checkLogin(StpUtil.java:190)
+	at cn.dev33.satoken.router.SaRouterUtil.match(SaRouterUtil.java:111)
+	at cn.like.code.server.satoken.config.SaTokenConfigure.lambda$getSaServletFilter$8(SaTokenConfigure.java:75)
+	at cn.dev33.satoken.filter.SaServletFilter.lambda$doFilter$3(SaServletFilter.java:158)
+	at cn.dev33.satoken.router.SaRouterUtil.match(SaRouterUtil.java:111)
+	at cn.dev33.satoken.filter.SaServletFilter.doFilter(SaServletFilter.java:156)
+	... 44 common frames omitted
+2021-05-15 22:54:33.445 [RMI TCP Connection(6)-192.168.42.30] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-05-15 22:54:35.198 [http-nio-8101-exec-2] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+cn.dev33.satoken.exception.SaTokenException: cn.dev33.satoken.exception.NotLoginException: 未提供token
+	at cn.dev33.satoken.filter.SaServletFilter.lambda$new$1(SaServletFilter.java:109)
+	at cn.dev33.satoken.filter.SaServletFilter.doFilter(SaServletFilter.java:163)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:141)
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:82)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.sika.code.standard.request.filter.HttpRequestFilter.doFilter(HttpRequestFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.sika.code.common.threadlocal.filter.ClearThreadLocalFilter.doFilter(ClearThreadLocalFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: cn.dev33.satoken.exception.NotLoginException: 未提供token
+	at cn.dev33.satoken.exception.NotLoginException.newInstance(NotLoginException.java:121)
+	at cn.dev33.satoken.stp.StpLogic.getLoginId(StpLogic.java:447)
+	at cn.dev33.satoken.stp.StpLogic.checkLogin(StpLogic.java:432)
+	at cn.dev33.satoken.stp.StpUtil.checkLogin(StpUtil.java:190)
+	at cn.dev33.satoken.router.SaRouterUtil.match(SaRouterUtil.java:111)
+	at cn.like.code.server.satoken.config.SaTokenConfigure.lambda$getSaServletFilter$8(SaTokenConfigure.java:75)
+	at cn.dev33.satoken.filter.SaServletFilter.lambda$doFilter$3(SaServletFilter.java:158)
+	at cn.dev33.satoken.router.SaRouterUtil.match(SaRouterUtil.java:111)
+	at cn.dev33.satoken.filter.SaServletFilter.doFilter(SaServletFilter.java:156)
+	... 44 common frames omitted
+2021-05-15 22:55:54.043 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 19424 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:55:54.050 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 22:55:57.264 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 22:55:57.268 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 22:55:57.324 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+2021-05-15 22:55:58.908 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 22:55:58.920 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:55:58.920 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 22:55:58.920 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 22:55:59.026 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 22:55:59.026 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4247 ms
+2021-05-15 22:56:02.115 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 22:56:05.404 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 22:56:09.515 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 22:56:13.143 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-05-15 22:56:13.190 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 22:56:13.319 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 22:56:13.331 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 22:56:16.004 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-05-15 22:56:16.620 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 22:56:16.652 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 28.512 seconds (JVM running for 32.425)
+2021-05-15 22:56:18.646 [http-nio-8101-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 22:56:18.646 [http-nio-8101-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 22:56:18.650 [http-nio-8101-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2021-05-15 22:56:19.836 [RMI TCP Connection(12)-192.168.42.30] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 22:56:19.882 [RMI TCP Connection(12)-192.168.42.30] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1a89414e:0/SimpleConnection@4b146784 [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 2190]
+2021-05-15 22:56:19.942 [RMI TCP Connection(12)-192.168.42.30] WARN  com.zaxxer.hikari.HikariConfig - DatebookHikariCP - idleTimeout is close to or more than maxLifetime, disabling it.
+2021-05-15 22:56:19.942 [RMI TCP Connection(12)-192.168.42.30] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 22:56:20.230 [RMI TCP Connection(12)-192.168.42.30] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-05-15 22:59:59.481 [main] INFO  cn.like.code.server.AdminApplication - Starting AdminApplication using Java 1.8.0_151 on like with PID 8076 (D:\Java\project\admin\like-admin\like-web-server\target\classes started by pdd20 in D:\Java\project\admin\like-admin)
+2021-05-15 22:59:59.486 [main] INFO  cn.like.code.server.AdminApplication - The following profiles are active: develop
+2021-05-15 23:00:03.297 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-15 23:00:03.309 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-15 23:00:03.396 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 0 Redis repository interfaces.
+2021-05-15 23:00:05.350 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8101 (http)
+2021-05-15 23:00:05.367 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2021-05-15 23:00:05.368 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-15 23:00:05.368 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-15 23:00:05.541 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-15 23:00:05.541 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5471 ms
+2021-05-15 23:00:08.355 [main] INFO  org.redisson.Version - Redisson 3.11.0
+2021-05-15 23:00:10.683 [redisson-netty-4-3] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2021-05-15 23:00:15.273 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 23:00:19.251 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-05-15 23:00:19.363 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 23:00:19.507 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2021-05-15 23:00:19.525 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8101 (http) with context path ''
+2021-05-15 23:00:21.759 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-05-15 23:00:22.381 [main] INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-05-15 23:00:22.396 [main] INFO  cn.like.code.server.AdminApplication - Started AdminApplication in 28.833 seconds (JVM running for 32.629)
+2021-05-15 23:00:22.667 [RMI TCP Connection(3)-192.168.42.30] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-05-15 23:00:22.735 [RMI TCP Connection(3)-192.168.42.30] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1c2096c6:0/SimpleConnection@1a0c769e [delegate=amqp://like@127.0.0.1:5672//like-admin, localPort= 2526]
+2021-05-15 23:00:22.906 [RMI TCP Connection(3)-192.168.42.30] WARN  com.zaxxer.hikari.HikariConfig - DatebookHikariCP - idleTimeout is close to or more than maxLifetime, disabling it.
+2021-05-15 23:00:22.907 [RMI TCP Connection(3)-192.168.42.30] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-05-15 23:00:23.240 [RMI TCP Connection(3)-192.168.42.30] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-05-15 23:00:24.403 [RMI TCP Connection(5)-192.168.42.30] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 23:00:24.404 [RMI TCP Connection(5)-192.168.42.30] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-15 23:00:24.408 [RMI TCP Connection(5)-192.168.42.30] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
