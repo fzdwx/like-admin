@@ -43,7 +43,7 @@ const defaultBarOption = {
     borderColor: defaultTooltip.borderColor, // 设置边框颜色
     textStyle: defaultTooltip.textStyle,
     extraCssText: defaultTooltip.extraCssText,
-    formatter: function(param) {
+    formatter: function (param) {
       return defaultFormatter(param, '#40a9ff')
     }
   },
@@ -113,7 +113,7 @@ const defaultLineOption = {
     borderColor: defaultTooltip.borderColor, // 设置边框颜色
     textStyle: defaultTooltip.textStyle,
     extraCssText: defaultTooltip.extraCssText,
-    formatter: function(param) {
+    formatter: function (param) {
       return defaultFormatter(param, '#40a9ff')
     }
   },
@@ -175,7 +175,7 @@ const defaultPieOption = {
     borderColor: defaultTooltip.borderColor, // 设置边框颜色
     extraCssText: defaultTooltip.extraCssText,
     textStyle: defaultTooltip.textStyle,
-    formatter: function(param) {
+    formatter: function (param) {
       return defaultFormatter(param)
     }
   },
@@ -226,7 +226,7 @@ const defaultPieOption = {
 
 // --------------------------------- 常量End ------------------------------
 
-function changeMarkerSize(marker, backgroundColor, size = '8px') {
+function changeMarkerSize (marker, backgroundColor, size = '8px') {
   const PageDOM = document.createElement('div') // 创建一个容器
   PageDOM.innerHTML = marker
   const spanStyle = PageDOM.getElementsByTagName('span')[0].style
@@ -238,7 +238,7 @@ function changeMarkerSize(marker, backgroundColor, size = '8px') {
   return PageDOM.innerHTML
 }
 
-function defaultFormatter(param, backGroundColor) {
+function defaultFormatter (param, backGroundColor) {
   let firstParam = param
   if (param instanceof Array) {
     firstParam = param[0]
@@ -259,7 +259,7 @@ function defaultFormatter(param, backGroundColor) {
 }
 
 // 监听Option的变化进行刷新
-function watchOptionRefresh(self, newVal, oldVal) {
+function watchOptionRefresh (self, newVal, oldVal) {
   if (self.myChart && self.myChart.setOption) {
     if (newVal) {
       self.myChart.setOption(newVal)
@@ -272,7 +272,7 @@ function watchOptionRefresh(self, newVal, oldVal) {
 }
 
 /** 模板方法画图 */
-function drawChart(self) {
+function drawChart (self) {
   // 基于准备好的dom，初始化echarts实例
   const dom = document.getElementById(self.chartId)
   self.myChart = echarts.init(dom, self.theme)
@@ -281,7 +281,7 @@ function drawChart(self) {
 }
 
 /** 合并option */
-function mergerOption(defaultOption, clientOption) {
+function mergerOption (defaultOption, clientOption) {
   const defaultOptionClone = _.cloneDeep(defaultOption)
   return _.merge(defaultOptionClone, clientOption)
 }

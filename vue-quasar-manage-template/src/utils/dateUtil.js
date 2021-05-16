@@ -1,4 +1,4 @@
-function buildRandomDate(year) {
+function buildRandomDate (year) {
   if (!year) {
     year = Math.floor(Math.random() * 10) + 2010
   }

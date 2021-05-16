@@ -1,23 +1,23 @@
 import { Notify, Dialog, QSpinnerIos, Loading, exportFile } from 'quasar'
 import _ from 'lodash'
 
-function getRandomData(datas) {
+function getRandomData (datas) {
   return datas[Math.floor(Math.random() * datas.length)]
 }
 
-function getRandomRangeInt(minValue, maxValue) {
+function getRandomRangeInt (minValue, maxValue) {
   return getRandomFloorInt(maxValue) + minValue
 }
 
-function getRandomFloorInt(maxValue) {
+function getRandomFloorInt (maxValue) {
   return Math.floor(Math.random() * maxValue)
 }
 
-function getRandomCeilInt(maxValue) {
+function getRandomCeilInt (maxValue) {
   return Math.ceil(Math.random() * maxValue)
 }
 
-function resetObj(obj) {
+function resetObj (obj) {
   const objClone = _.clone(obj)
   Object.keys(objClone).forEach((key) => {
     objClone[key] = null
@@ -25,7 +25,7 @@ function resetObj(obj) {
   return objClone
 }
 
-function resetArray(array) {
+function resetArray (array) {
   if (array && array instanceof Array) {
     const arrayClone = _.clone(array)
     arrayClone.splice(0, arrayClone.length)
@@ -35,7 +35,7 @@ function resetArray(array) {
 }
 
 /* notify - begin */
-function notifySuccess(message) {
+function notifySuccess (message) {
   Notify.create({
     color: 'white',
     textColor: 'positive',
@@ -45,7 +45,7 @@ function notifySuccess(message) {
   })
 }
 
-function notifyError(message) {
+function notifyError (message) {
   Notify.create({
     color: 'white',
     textColor: 'negative',
@@ -55,7 +55,7 @@ function notifyError(message) {
   })
 }
 
-function notifyWaring(message) {
+function notifyWaring (message) {
   Notify.create({
     color: 'white',
     textColor: 'warning',
@@ -65,7 +65,7 @@ function notifyWaring(message) {
   })
 }
 
-function notifyAlert(message) {
+function notifyAlert (message) {
   Notify.create({
     color: 'white',
     textColor: 'negative',
@@ -75,7 +75,7 @@ function notifyAlert(message) {
   })
 }
 
-function notifyInfo(message) {
+function notifyInfo (message) {
   Notify.create({
     color: 'white',
     textColor: 'info',
@@ -88,7 +88,7 @@ function notifyInfo(message) {
 /* notify - end */
 
 /* confirm - begin */
-function confirm(message, title) {
+function confirm (message, title) {
   if (!title) {
     title = '提示'
   }
@@ -112,7 +112,7 @@ function confirm(message, title) {
 /* alert - end */
 
 /* confirm - begin */
-function alert(message, title) {
+function alert (message, title) {
   if (!title) {
     title = '系统提示'
   }
@@ -126,11 +126,11 @@ function alert(message, title) {
 
 /* alert - end */
 
-function getUrlRootPath() {
+function getUrlRootPath () {
   return window.location.protocol + '//' + location.host
 }
 
-function showLoading(msg) {
+function showLoading (msg) {
   if (!msg || msg === '') {
     msg = '加载中'
   }
@@ -145,11 +145,11 @@ function showLoading(msg) {
   })
 }
 
-function hideLoading() {
+function hideLoading () {
   Loading.hide()
 }
 
-function exportTable(columns, datas, separator) {
+function exportTable (columns, datas, separator) {
   if (!separator || separator === '') {
     separator = ','
   }
@@ -174,7 +174,7 @@ function exportTable(columns, datas, separator) {
   }
 }
 
-function wrapCsvValue(val, formatFn) {
+function wrapCsvValue (val, formatFn) {
   // eslint-disable-next-line no-void
   let formatted = formatFn !== void 0
     ? formatFn(val)
