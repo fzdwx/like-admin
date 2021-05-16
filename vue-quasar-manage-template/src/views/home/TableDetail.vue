@@ -12,7 +12,7 @@ export default {
   components: { BaseContent },
   data () {
     return {
-      msg: ''
+      msg: '12312'
     }
   },
   created () {

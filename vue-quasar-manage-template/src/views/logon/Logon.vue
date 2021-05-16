@@ -103,7 +103,7 @@ export default {
       }).then(res => {
         console.log("res:" + res);
         commonUtil.notifySuccess('hi  ' + this.username + ' 欢迎回来! ')
-        window.location="/";
+        window.location = "/";
       }).catch(error => {
         console.log(error)
       })
