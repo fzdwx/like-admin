@@ -1,4 +1,4 @@
-package cn.like.code.server.satoken.auth.dto;
+package cn.like.code.server.satoken.dto;
 
 import lombok.Data;
 import lombok.ToString;

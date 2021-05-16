@@ -6,8 +6,8 @@ import cn.dev33.satoken.stp.StpUtil;
 import cn.like.code.server.business.user.pojo.dto.UserDTO;
 import cn.like.code.server.business.user.pojo.query.UserQuery;
 import cn.like.code.server.business.user.service.UserService;
-import cn.like.code.server.satoken.auth.TokenConstant;
-import cn.like.code.server.satoken.auth.dto.AuthDto;
+import cn.like.code.server.constant.TokenConstant;
+import cn.like.code.server.satoken.dto.AuthDto;
 import com.google.common.base.Preconditions;
 import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
@@ -62,7 +62,7 @@ public class LoginController extends BaseStandardController {
 
         SaTokenInfo tokenInfo = StpUtil.getTokenInfo();
 
-        log.info("[login] 用户登录成功:{}", tokenInfo);
+        log.info("[login] 用户登录成功:{}-{}",username, tokenInfo.getTokenValue());
         String roles = Arrays.toString(stpInterface.getRoleList(user.getId(), tokenInfo.getLoginKey()).toArray());
         String token = tokenInfo.getTokenValue();
 

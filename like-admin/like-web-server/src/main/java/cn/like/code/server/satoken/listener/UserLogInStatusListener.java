@@ -6,6 +6,7 @@ import cn.hutool.core.date.DatePattern;
 import cn.like.code.server.constant.RedisConstant;
 import com.sika.code.cache.redis.util.RedisUtil;
 import com.sika.code.common.date.util.DateUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
@@ -22,6 +23,7 @@ import static cn.like.code.server.constant.RedisConstant.BitTrue;
  * @desc: 用户登录状态侦听器
  */
 @Component
+@Slf4j
 public class UserLogInStatusListener implements SaTokenListener {
 
     @Autowired
@@ -41,19 +43,29 @@ public class UserLogInStatusListener implements SaTokenListener {
     /** 每次注销时触发 */
     @Override
     public void doLogout(String loginKey, Object loginId, String tokenValue) {
-        // ...
+        // del token
+        redis.delete(Objects.requireNonNull(RedisUtil.generateRedisKey(
+                RedisConstant.SaToken.KEY_SATOKEN_PREFIX,
+                RedisConstant.SaToken.KEY_LOGIN_BODY, RedisConstant.SaToken.KEY_TOKEN_BODY,
+                tokenValue)));
+        log.info("[login] 用户注销:{}-{}",loginId, tokenValue);
     }
 
     /** 每次被踢下线时触发 */
     @Override
     public void doLogoutByLoginId(String loginKey, Object loginId, String tokenValue, String device) {
-        // ...
+
     }
 
     /** 每次被顶下线时触发 */
     @Override
     public void doReplaced(String loginKey, Object loginId, String tokenValue, String device) {
-        // ...
+        // del token
+        redis.delete(Objects.requireNonNull(RedisUtil.generateRedisKey(
+                RedisConstant.SaToken.KEY_SATOKEN_PREFIX,
+                RedisConstant.SaToken.KEY_LOGIN_BODY, RedisConstant.SaToken.KEY_TOKEN_BODY,
+                tokenValue)));
+        log.info("[login] 用户被顶下线:{}-{}",loginId, tokenValue);
     }
 
     /** 每次被封禁时触发 */

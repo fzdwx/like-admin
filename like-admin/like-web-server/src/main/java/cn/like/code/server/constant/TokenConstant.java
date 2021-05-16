@@ -1,7 +1,4 @@
-package cn.like.code.server.satoken.auth;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+package cn.like.code.server.constant;
 
 /**
  * @author: like
@@ -9,7 +6,6 @@ import org.springframework.stereotype.Component;
  * @email: 980650920@qq.com
  * @desc:
  */
-@Component
 public class TokenConstant {
 
     public static String tokenName="auth";
