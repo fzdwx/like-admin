@@ -9,6 +9,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 import javax.servlet.Filter;
+import java.util.Collections;
 
 /**
  * <p>
@@ -39,7 +40,7 @@ public class CorsConfig {
         // 允许cookies跨域
         config.setAllowCredentials(true);
         // #允许向该服务器提交请求的URI，*表示全部允许
-        config.addAllowedOrigin("*");
+        config.setAllowedOriginPatterns(Collections.singletonList("*"));
         // #允许访问的头信息,*表示全部
         config.addAllowedHeader("*");
         // 预检请求的缓存时间（秒），即在这个时间段里，对于相同的跨域请求不会再预检了
