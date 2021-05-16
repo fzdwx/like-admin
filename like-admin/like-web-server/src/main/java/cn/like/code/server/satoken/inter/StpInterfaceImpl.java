@@ -90,7 +90,7 @@ public class StpInterfaceImpl implements StpInterface {
                     .map(UserRoleEntity::getRoleId)
                     .collect(Collectors.toSet()))
                     .stream()
-                    .map(RoleEntity::getRoleKey)
+                    .map(RoleEntity::getRoleName)
                     .collect(Collectors.toList());
         }
         return roles;

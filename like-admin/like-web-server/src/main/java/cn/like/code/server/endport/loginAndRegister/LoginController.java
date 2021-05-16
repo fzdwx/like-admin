@@ -1,10 +1,13 @@
 package cn.like.code.server.endport.loginAndRegister;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
+import cn.dev33.satoken.stp.StpInterface;
 import cn.dev33.satoken.stp.StpUtil;
 import cn.like.code.server.business.user.pojo.dto.UserDTO;
 import cn.like.code.server.business.user.pojo.query.UserQuery;
 import cn.like.code.server.business.user.service.UserService;
+import cn.like.code.server.satoken.auth.TokenConstant;
+import cn.like.code.server.satoken.auth.dto.AuthDto;
 import com.google.common.base.Preconditions;
 import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
@@ -12,8 +15,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Objects;
 
 /**
@@ -30,33 +36,42 @@ public class LoginController extends BaseStandardController {
 
     @Autowired
     UserService userService;
+    @Autowired
+    StpInterface stpInterface;
 
     /**
      * 登录
      *
-     * @param username 用户名
-     * @param password 密码
+     * @param authDto auth dto
      * @return {@link Result}
      */
     @PostMapping("/auth/login")
-    public Result login(String username, String password) {
-        Preconditions.checkNotNull(username, "登录：用户名不能为空");
-        Preconditions.checkNotNull(password, "登录：密码不能为空");
+    public Result login(@RequestBody AuthDto authDto) {
+        Preconditions.checkNotNull(authDto.getUsername(), "登录：用户名不能为空");
+        Preconditions.checkNotNull(authDto.getUsername(), "登录：密码不能为空");
+        String username = authDto.getUsername();
         UserDTO user = userService.find(new UserQuery().setUsername(username));
         if (Objects.isNull(user)) {
             return fail("用户不存在:" + username);
         }
-        if (!BCrypt.hashpw(password, user.getSalt()).equals(user.getPassword())) {
+        if (!BCrypt.hashpw(authDto.getPassword(), user.getSalt()).equals(user.getPassword())) {
             return fail("用户密码错误:" + username);
         }
-
         // 调用 satoken 登录当前用户
         StpUtil.setLoginId(user.getId());
 
         SaTokenInfo tokenInfo = StpUtil.getTokenInfo();
 
         log.info("[login] 用户登录成功:{}", tokenInfo);
-        return success(tokenInfo);
+        String roles = Arrays.toString(stpInterface.getRoleList(user.getId(), tokenInfo.getLoginKey()).toArray());
+        String token = tokenInfo.getTokenValue();
+
+        return success(new HashMap<String, Object>() {
+            {
+                put(TokenConstant.userRoleName, roles.substring(1,roles.length()-1));
+                put(TokenConstant.tokenName, token);
+            }
+        });
     }
 
     /**
