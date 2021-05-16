@@ -4,6 +4,7 @@ package cn.like.code.server.business.user.controller;
 import cn.like.code.server.business.user.pojo.dto.UserDTO;
 import cn.like.code.server.business.user.pojo.query.UserQuery;
 import cn.like.code.server.business.user.service.UserService;
+import com.sika.code.database.common.Page;
 import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -45,7 +47,13 @@ public class UserController extends BaseStandardController {
 
     @PostMapping(value = "page")
     public Result page(@RequestBody UserQuery userQuery) {
-        return super.success(userService.page(userQuery));
+        Page<UserDTO> page = userService.page(userQuery);
+        page.setList(page.getList().stream().peek(o->{
+            o.setSalt("");
+            o.setPassword("");
+            o.setOauthPwd("");
+        }).collect(Collectors.toList()));
+        return super.success(page);
     }
 
     @RequestMapping(value = "find")
