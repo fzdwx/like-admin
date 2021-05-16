@@ -8,7 +8,7 @@ import com.sika.code.exception.dto.BaseBusinessExceptionDTO;
 import com.sika.code.no.generator.NoGenerator;
 import com.sika.code.result.Result;
 import com.sika.code.result.config.ResultNoConfig;
-import com.sika.code.standard.auth.constant.AuthErrorCode;
+import com.sika.code.standard.auth.constant.NoLogErrorCode;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -66,9 +66,9 @@ public class ResultGenerator {
         return result;
     }
 
-    public Result generateResultError(AuthErrorCode authErrorCode) {
-        Result result = Result.newError(authErrorCode.getMessage());
-        result.setCode(authErrorCode.getCode());
+    public Result generateResultError(NoLogErrorCode noLogErrorCode) {
+        Result result = Result.newError(noLogErrorCode.getMessage());
+        result.setCode(noLogErrorCode.getCode());
         return result;
     }
 

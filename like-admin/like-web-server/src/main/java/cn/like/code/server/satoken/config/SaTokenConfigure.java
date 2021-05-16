@@ -4,6 +4,7 @@ import cn.dev33.satoken.context.SaHolder;
 import cn.dev33.satoken.filter.SaServletFilter;
 import cn.dev33.satoken.router.SaRouterUtil;
 import cn.dev33.satoken.stp.StpUtil;
+import cn.like.code.server.satoken.NotLoginExAdvice;
 import com.sika.code.common.json.util.JSONUtil;
 import com.sika.code.result.generator.ResultGenerator;
 import lombok.extern.slf4j.Slf4j;
@@ -93,8 +94,9 @@ public class SaTokenConfigure implements WebMvcConfigurer {
 
                 // 异常处理函数：每次认证函数发生异常时执行此函数
                 .setError(e -> {
-
-                    return JSONUtil.toJSONString(new ResultGenerator().generateResultError(e.getMessage()));
+                    // 不能只打印message
+                    e.printStackTrace();
+                    return JSONUtil.toJSONString(new ResultGenerator().generateResultError(NotLoginExAdvice.newInstance(e.getMessage())));
                 })
 
                 // 前置函数：在每次认证函数之前执行

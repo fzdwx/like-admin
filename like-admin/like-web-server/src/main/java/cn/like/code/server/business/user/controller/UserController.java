@@ -7,6 +7,7 @@ import cn.like.code.server.business.user.service.UserService;
 import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -42,7 +43,7 @@ public class UserController extends BaseStandardController {
         return super.success(userService.updateById(userDto));
     }
 
-    @RequestMapping(value = "page")
+    @PostMapping(value = "page")
     public Result page(@RequestBody UserQuery userQuery) {
         return super.success(userService.page(userQuery));
     }

@@ -10,15 +10,20 @@ import lombok.Getter;
  */
 @AllArgsConstructor
 @Getter
-public enum AuthErrorCode implements BaseErrorCode {
-    /** 登录信息失效 --- AUTH_000001 */
-    LOGIN_INFO_INVALID("AUTH_000001", "%s"),
-    /** token非法 --- AUTH_000002 */
-    TOKEN_SIGNATURE_EXCEPTION("AUTH_000002", "token非法"),
-    /** token的秘钥有误 --- AUTH_000003 */
-    JWT_SECRET_WRONG("AUTH_000003", "token的秘钥有误"),
-    /** 登录信息失效 --- AUTH_000004 */
-    LOGIN_INFO_WRONG("AUTH_000004", "登录信息有误"),
+public enum NoLogErrorCode implements BaseErrorCode {
+
+    NOT_TOKEN_MESSAGE("-1", "未提供token"),
+
+    INVALID_TOKEN_MESSAGE("-2", "token无效"),
+
+    TOKEN_TIMEOUT_MESSAGE("-3", "token已过期"),
+
+    BE_REPLACED_MESSAGE("-4", "token已被顶下线"),
+
+    KICK_OUT_MESSAGE("-5", "token已被踢下线"),
+    default_MESSAGE("5", "default message"),
+
+
     /** 用户名或密码有误 --- AUTH_000005 */
     USERNAME_PASSWORD_WRONG("AUTH_000005", "用户名或密码有误"),
     /** 权限不足 --- AUTHENTICATE_000001 */

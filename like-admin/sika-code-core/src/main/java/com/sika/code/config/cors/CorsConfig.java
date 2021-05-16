@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.servlet.Filter;
 import java.util.Collections;
@@ -21,7 +22,7 @@ import java.util.Collections;
  */
 @Configuration
 @ConditionalOnClass(Filter.class)
-public class CorsConfig {
+public class CorsConfig implements WebMvcConfigurer {
     /**
      * 预检请求的缓存时间（秒），即在这个时间段里，对于相同的跨域请求不会再预检了
      */

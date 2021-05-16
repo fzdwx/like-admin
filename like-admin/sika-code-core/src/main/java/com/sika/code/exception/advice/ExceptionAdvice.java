@@ -1,3 +1,4 @@
+/*
 package com.sika.code.exception.advice;
 
 import cn.hutool.core.util.BooleanUtil;
@@ -22,6 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
+*/
 /**
  * <p>
  * 统一异常处理类
@@ -30,7 +32,8 @@ import java.util.Map;
  * @author daiqi
  * @date 2018/8/6 9:49
  * @return
- */
+ *//*
+
 @Data
 @ControllerAdvice
 @ConditionalOnClass(Filter.class)
@@ -44,9 +47,11 @@ public class ExceptionAdvice {
     @Autowired
     private ResultGenerator resultGenerator;
 
-    /**
+    */
+/**
      * 基于@ExceptionHandler异常处理
-     */
+     *//*
+
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public Result exceptionHandler(HttpServletRequest request, HttpServletResponse response, Exception exception) {
@@ -54,9 +59,11 @@ public class ExceptionAdvice {
         return result;
     }
 
-    /**
+    */
+/**
      * 基于@ExceptionHandler异常处理
-     */
+     *//*
+
     @ExceptionHandler(RuntimeException.class)
     @ResponseBody
     public Result runtimeExceptionHandler(HttpServletRequest request, HttpServletResponse response, RuntimeException runtimeException) {
@@ -70,9 +77,11 @@ public class ExceptionAdvice {
         return buildResultAndInform(request, businessException);
     }
 
-    /**-
+    */
+/**-
      * 构建异常的Result
-     */
+     *//*
+
     protected Result buildResultAndInform(HttpServletRequest request, Exception exception) {
         Result result = buildResult(request, exception);
         log.error(exception.getMessage(), exception);
@@ -83,7 +92,8 @@ public class ExceptionAdvice {
         return result;
     }
 
-    /**
+    */
+/**
      * <p>
      * 判断当前errorCode是否是需要通知的errorCode
      * </p>
@@ -92,7 +102,8 @@ public class ExceptionAdvice {
      * @return boolean 是返回true  否则返回false
      * @author daiqi
      * @date 2019/3/25 14:18
-     */
+     *//*
+
     protected boolean isInformCode(String errorCode) {
         boolean isInform = true;
         if (BooleanUtil.isTrue(exceptionProperties.getExclude())) {
@@ -113,11 +124,13 @@ public class ExceptionAdvice {
         return resultGenerator.generateExceptionResult(request.getRequestURL().toString(), exception);
     }
 
-    /**
+    */
+/**
      * 通知
-     */
+     *//*
+
     protected void inform(Exception exception) {
         InformerUtil.inform(exception, informerProperties.getExceptionInformers(), log);
     }
 
-}
+}*/

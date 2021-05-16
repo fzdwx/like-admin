@@ -1,7 +1,9 @@
 package cn.like.code.server.satoken;
 
+
 import cn.dev33.satoken.exception.NotLoginException;
 import com.sika.code.result.Result;
+import com.sika.code.standard.auth.constant.NoLogErrorCode;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -11,6 +13,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import javax.servlet.Filter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import static com.sika.code.standard.auth.constant.NoLogErrorCode.INVALID_TOKEN_MESSAGE;
+import static com.sika.code.standard.auth.constant.NoLogErrorCode.*;
+
 
 /**
  * @author: like
@@ -56,5 +62,20 @@ public class NotLoginExAdvice {
 
         // 返回给前端
         return Result.newError(message);
+    }
+
+    public static NoLogErrorCode newInstance(String message) {
+        if (NOT_TOKEN_MESSAGE.getMessage().equals(message)) {
+            return NOT_TOKEN_MESSAGE;
+        } else if (INVALID_TOKEN_MESSAGE.getMessage().equals(message)) {
+            return INVALID_TOKEN_MESSAGE;
+        } else if (TOKEN_TIMEOUT_MESSAGE.getMessage().equals(message)) {
+            return TOKEN_TIMEOUT_MESSAGE;
+        } else if (BE_REPLACED_MESSAGE.getMessage().equals(message)) {
+            return BE_REPLACED_MESSAGE;
+        } else if (KICK_OUT_MESSAGE.getMessage().equals(message)) {
+            return KICK_OUT_MESSAGE;
+        }
+        return default_MESSAGE;
     }
 }

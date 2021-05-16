@@ -53,7 +53,7 @@ public class StpInterfaceImpl implements StpInterface {
     public List<String> getPermissionList(Object loginId, String loginKey) {
         List<String> permissions;
 
-        List<UserRoleEntity> roleIds = userRoleService.listRoleIdByUserId((Long) loginId);
+        List<UserRoleEntity> roleIds = userRoleService.listRoleIdByUserId(Long.parseLong(loginId.toString()));
         if (CollectionUtil.isEmpty(roleIds)) {
             permissions = new ArrayList<>();
         } else {
