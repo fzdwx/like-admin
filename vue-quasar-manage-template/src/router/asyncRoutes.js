@@ -27,11 +27,11 @@ const asyncRoutesChildren = [
         component: () => import('@/views/router/AsyncRouter')
     },
     {
-        path: '/menu-1',
-        name: 'menu-1',
+        path: '/user',
+        name: 'user',
         meta: {
             roles: ['admin', 'editor'],
-            title: '模块 - 1',
+            title: '用户管理',
             itemLabel: 'SOME LABEL',
             icon: 'library_music',
             isOpen: true
@@ -39,27 +39,14 @@ const asyncRoutesChildren = [
         component: Layout,
         children: [
             {
-                path: 'menu-1-1',
-                name: 'menu-1-1',
+                path: 'list',
+                name: 'user-list',
                 meta: {
                     roles: ['admin', 'editor'],
-                    title: '模块 1 - 1',
+                    title: '用户列表',
                     icon: 'filter_1'
                 },
-                component: Layout,
-                children: [
-                    {
-                        path: 'menu-1-1-1',
-                        name: 'Menu-1-1-1',
-                        meta: {
-                            roles: ['admin', 'editor'],
-                            title: '模块 1 - 1 - 1',
-                            icon: 'flaky',
-                            keepAlive: true
-                        },
-                        component: () => import('@/views/menu1/Menu1')
-                    },
-                ]
+                component: () => import('@/views/user/list')
             },
             {
                 path: 'menu-1-2',
@@ -70,7 +57,7 @@ const asyncRoutesChildren = [
                     icon: 'filter_2',
                     keepAlive: true
                 },
-                component: () => import('@/views/menu1/Menu1-2')
+                component: () => import('@/views/user/Menu1-2')
             }
         ]
     },

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import Vue from 'vue'
 import commonUtil from '../utils/commonUtil'
-import {getToken, setToken, localStorageKey, setUserRole} from '@/utils/authUtil'
+import {getToken, setToken, localStorageKey, setUserRole, clear} from '@/utils/authUtil'
 
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 // 创建axios实例Vue.prototype.$baseURL
@@ -25,11 +25,13 @@ service.interceptors.request.use(function (config) {
     } else {
         config.headers[localStorageKey.token] = getToken()
     }
-    console.log(config.headers[localStorageKey.token])
+    // config.headers["Access-Control-Allow-Origin"] = "*";
+    console.log(config.headers);
     return config
 }, function (error) {
     return systemError(error)
 })
+
 
 // 响应拦截器
 service.interceptors.response.use(function (response) {
@@ -39,12 +41,13 @@ service.interceptors.response.use(function (response) {
     }
     // 未设置状态码则默认成功状态
     const result = response.data
-  /*  if (result.success === undefined || null) {
-        return response.data
-    }*/
+    /*  if (result.success === undefined || null) {
+          return response.data
+      }*/
     const data = result.data
 
-    if (data[localStorageKey.token]) {
+    if (data !== undefined && data[localStorageKey.token] !== undefined && data[localStorageKey.token] !== '' && data[localStorageKey.token] != null && data[localStorageKey.token] !== ""
+    ) {
         setToken(data[localStorageKey.token])
         setUserRole(data[localStorageKey.userRole])
     }
@@ -88,9 +91,11 @@ function systemError(error) {
 function bizError(result, config) {
     const code = result.code
     const message = result.message
-    if (code === 'AUTH_000001') {
-        commonUtil.alert('登录状态已过期，重新登录').onOk(() => {
-            location.href = '/user/login'
+    console.log("code:" + code);
+    if (code === '-1' || '-2' || '-5' || '-4' || '-3') {
+        commonUtil.alert(message).onOk(() => {
+            location.href = '/logon'
+            clear()
         }).onOk(() => {
             // console.log('>>>> second OK catcher')
         }).onCancel(() => {
@@ -117,16 +122,16 @@ export function showNotifyTrue() {
 }
 
 // post请求
-export function post(url, param, config) {
+/*export function post(url, data, config) {
     const cfg = Object.assign(showNotifyTrue(), config)
     console.log(cfg + '----------')
     return service({
         url: url,
         method: 'post',
         ...cfg,
-        data: param
+        data: data
     })
-}
+}*/
 
 // post-upload请求
 export function postUpload(url, param, config) {
@@ -161,14 +166,17 @@ export function postForImage(url, param, config) {
 }
 
 // get请求
-export function get(url, config) {
+/*
+export function get(url, params, config) {
     const cfg = Object.assign(showNotifyTrue, config)
     return service({
         url: url,
-        method: 'post',
-        ...cfg
+        method: 'get',
+        ...cfg,
+        params: params
     })
 }
+*/
 
 export function buildFullUrl(url) {
     return BASE_URL + url

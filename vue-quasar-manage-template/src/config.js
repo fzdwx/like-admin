@@ -7,8 +7,9 @@ Vue.prototype.$title = ' | Vue Quasar'
 Vue.prototype.$SildeBar = 'hHh lpR fFf' // 风格二：lHh lpR fFf
 
 // axiois 中请求基地址，如果需要请在 axios/axios-config.js 中打开，下面是跨域代理示例
-// Vue.prototype.$baseURL = process.env.NODE_ENV === 'development' ? '/api/' : '生产环境 API'
-Vue.prototype.$baseURL = 'http://localhost:8101'
+// Vue.prototype.$baseURL = process.env.NODE_ENV === 'development' ? '/api/' : 'http://localhost:8101'
+Vue.prototype.$baseURL = '/api'
+// Vue.prototype.$baseURL = 'http://localhost:8101'
 
 // 请求超时时间
 Vue.prototype.$timeOut = 8000

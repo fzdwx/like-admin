@@ -48,11 +48,11 @@ function getQueryString(name) {
 }
 
 export function set(key, val) {
-    if (isLocalStorageSupported()) {
-        LocalStorage.set(key, val)
+    LocalStorage.set(key, val)
+  /*  if (isLocalStorageSupported()) {
     } else {
         Cookies.set(key, val, {expires: 24 * 3600})
-    }
+    }*/
 }
 
 export function getItem(key) {
@@ -60,7 +60,6 @@ export function getItem(key) {
         let item = LocalStorage.getItem(key);
         if (item != null) {
             let replace = item.replace("__q_strn|", '');
-            console.log("replace:", replace)
             return replace
         }
         return null;
