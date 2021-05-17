@@ -11,7 +11,6 @@ import {getToken} from "@/utils/authUtil";
 
 const fetchData = query => {
     const cfg = Object.assign(showNotifyTrue(), query.config)
-    console.log("zdy query")
     return _axios({
         url: query.url, // 请求地址
         method: query.method || 'POST', // 请求方式，默认为 POST

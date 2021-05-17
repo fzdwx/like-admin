@@ -17,7 +17,6 @@ service.defaults.withCredentials = true
 // 请求拦截器
 service.interceptors.request.use(function (config) {
     if (!getToken()) {
-        console.log(config.headers);
         config.headers[localStorageKey.token] = getQueryString(localStorageKey.token)
         // const auth = post('/auth/current_user')
         // console.log(auth)
@@ -26,7 +25,6 @@ service.interceptors.request.use(function (config) {
         config.headers[localStorageKey.token] = getToken()
     }
     // config.headers["Access-Control-Allow-Origin"] = "*";
-    console.log(config.headers);
     return config
 }, function (error) {
     return systemError(error)
@@ -74,7 +72,6 @@ export function getQueryString(name) {
 
 // 系统错误处理
 function systemError(error) {
-    console.log('err' + error)
     let {message} = error
     if (message === 'Network Error') {
         message = '后端接口连接异常'
@@ -91,7 +88,6 @@ function systemError(error) {
 function bizError(result, config) {
     const code = result.code
     const message = result.message
-    console.log("code:" + code);
     if (code === '-1' || '-2' || '-5' || '-4' || '-3') {
         commonUtil.alert(message).onOk(() => {
             location.href = '/logon'

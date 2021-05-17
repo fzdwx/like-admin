@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -63,13 +64,10 @@ public class LoginController extends BaseStandardController {
         SaTokenInfo tokenInfo = StpUtil.getTokenInfo();
 
         log.info("[login] 用户登录成功:{}-{}",username, tokenInfo.getTokenValue());
-        String roles = Arrays.toString(stpInterface.getRoleList(user.getId(), tokenInfo.getLoginKey()).toArray());
-        String token = tokenInfo.getTokenValue();
-
         return success(new HashMap<String, Object>() {
             {
-                put(TokenConstant.userRoleName, roles.substring(1,roles.length()-1));
-                put(TokenConstant.tokenName, token);
+                put(TokenConstant.userRoleName, stpInterface.getRoleList(user.getId(), tokenInfo.getLoginKey()).get(0));
+                put(TokenConstant.tokenName, tokenInfo.getTokenValue());
             }
         });
     }

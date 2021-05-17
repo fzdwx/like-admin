@@ -43,10 +43,11 @@ public class RoleServiceImpl extends BaseStandardServiceImpl<RoleMapper, RoleEnt
 
     @Override
     public List<RoleEntity> listRoleNameById(Set<Long> roleIds) {
-        roleMapper.selectList(new QueryWrapper<RoleEntity>()
+        return roleMapper.selectList(new QueryWrapper<RoleEntity>()
                 .in("id", roleIds)
-                .select("role_name"));
-        return roleMapper.selectBatchIds(roleIds);
+                .select("role_name")
+                .orderByAsc("role_sort"))
+                ;
     }
 }
 
