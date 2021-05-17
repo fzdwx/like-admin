@@ -3,6 +3,7 @@ package com.sika.code.database.mysql.interceptor;
 import com.sika.code.basic.constant.PropertiesConstant;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -14,6 +15,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @Data
 @ConfigurationProperties(prefix = PropertiesConstant.LOG_SQL)
+@Component
 public class SqlLogInterceptorProperties {
     private static final Boolean OPENLOG = true;
     private Boolean fire = OPENLOG;

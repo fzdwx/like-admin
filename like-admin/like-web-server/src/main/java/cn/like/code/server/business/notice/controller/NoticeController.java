@@ -1,25 +1,23 @@
 package cn.like.code.server.business.notice.controller;
 
 
-import cn.like.code.server.business.notice.pojo.dto.NoticeDTO;
-import cn.like.code.server.business.notice.pojo.query.NoticeQuery;
-import cn.like.code.server.business.notice.service.NoticeService;
+import java.util.List;
 import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
+import cn.like.code.server.business.notice.service.NoticeService;
+import cn.like.code.server.business.notice.pojo.dto.NoticeDTO;
+import cn.like.code.server.business.notice.pojo.query.NoticeQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-
 /**
  * <p>
  * 通知公告表 前端控制器
  * </p>
  *
  * @author like @email:980650920@qq.com
- * @since 2021-05-15 07:37:05
+ * @since 2021-05-17 22:07:53
  */
 @RestController(value = "noticeController")
 @RequestMapping("notice")

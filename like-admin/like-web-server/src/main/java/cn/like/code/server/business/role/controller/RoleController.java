@@ -1,25 +1,23 @@
 package cn.like.code.server.business.role.controller;
 
 
-import cn.like.code.server.business.role.pojo.dto.RoleDTO;
-import cn.like.code.server.business.role.pojo.query.RoleQuery;
-import cn.like.code.server.business.role.service.RoleService;
+import java.util.List;
 import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
+import cn.like.code.server.business.role.service.RoleService;
+import cn.like.code.server.business.role.pojo.dto.RoleDTO;
+import cn.like.code.server.business.role.pojo.query.RoleQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-
 /**
  * <p>
  * 权限表 前端控制器
  * </p>
  *
  * @author like @email:980650920@qq.com
- * @since 2021-05-15 07:37:04
+ * @since 2021-05-17 22:07:52
  */
 @RestController(value = "roleController")
 @RequestMapping("role")

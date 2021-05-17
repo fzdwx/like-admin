@@ -4,7 +4,8 @@ server:
     accept-count: 1024
     max-threads: 1024
 debug: false
-headImagePath: /usr/share/nginx/html/dist-quasar-admin/imgs/head/
+upload:
+  imageDir: /usr/share/nginx/html/dist-quasar-admin/imgs/head/
 sika:
   code:
     workspace:

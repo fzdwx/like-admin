@@ -1,8 +1,8 @@
 package cn.like.code.server.business.role.mapper;
 
 import cn.like.code.server.business.role.entity.RoleEntity;
-import com.sika.code.standard.base.basemapper.BaseStandardMapper;
 import org.springframework.stereotype.Repository;
+import com.sika.code.standard.base.basemapper.BaseStandardMapper;
 
 /**
  * <p>
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
  * </p>
  *
  * @author like @email:980650920@qq.com
- * @since 2021-05-15 07:37:04
+ * @since 2021-05-17 22:07:52
  */
 @Repository
 public interface RoleMapper extends BaseStandardMapper<RoleEntity> {

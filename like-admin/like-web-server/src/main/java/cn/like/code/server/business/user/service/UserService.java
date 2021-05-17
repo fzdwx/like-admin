@@ -1,6 +1,7 @@
 package cn.like.code.server.business.user.service;
 
 import cn.like.code.server.business.user.pojo.dto.UserDTO;
+import cn.like.code.server.business.user.pojo.query.UserQuery;
 import com.sika.code.standard.base.service.BaseStandardService;
 
 /**
@@ -14,4 +15,6 @@ import com.sika.code.standard.base.service.BaseStandardService;
 public interface UserService extends BaseStandardService<UserDTO> {
 
     boolean checkUserInfo(UserDTO userDTO);
+
+    Integer updateById(UserQuery dtoToQuery);
 }

@@ -25,7 +25,7 @@
           <tr v-for="user in userList">
             <td class="text-center q-td--no hover">{{ user.id }}</td>
             <td class="text-center q-td--no hover">{{ user.username }}</td>
-            <td class="text-center q-td--no hover">{{ user.nikename }}</td>
+            <td class="text-center q-td--no hover">{{ user.nickname }}</td>
             <td class="text-center q-td--no hover">{{ user.sex }}</td>
             <td class="text-center q-td--no hover">{{ user.phone }}</td>
             <td class="text-center q-td--no hover">{{ user.email }}</td>
@@ -60,7 +60,7 @@
 
           <q-card-section class="q-pt-none q-gutter-y-md column" style="width: 500px;">
             <q-input rounded type="" standout="bg-teal text-white" label="姓名" v-model="editUser.username" autofocus/>
-            <q-input rounded standout="bg-teal text-white" label="昵称" v-model="editUser.nikename" autofocus/>
+            <q-input rounded standout="bg-teal text-white" label="昵称" v-model="editUser.nickname" autofocus/>
             <q-input type="tel" rounded standout="bg-teal text-white" label="手机号码" v-model="editUser.phone" autofocus/>
             <q-input type="email" rounded standout="bg-teal text-white" label="邮箱" v-model="editUser.email" autofocus/>
             <div class="q-gutter-sm">
@@ -68,7 +68,7 @@
               <q-radio color="cyan" v-model="editUser.sex" val="2" label="女"/>
             </div>
             <q-input disable rounded standout="bg-teal text-white" label="用户类别" v-model="editUser.type" autofocus/>
-            <q-uploader ref="upImg" label="上传头像" hideUploadBtn field-name="file" :filter="check" url="/api/upload"/>
+            <q-uploader ref="upImg" label="上传头像" field-name="file" :filter="check" url="/api/upload"/>
             <q-avatar rounded>
               <q-img :src="editUser.avatar"/>
             </q-avatar>
@@ -88,6 +88,7 @@
 import BaseContent from '../../components/BaseContent/BaseContent'
 import {getUserList} from "@/api/UserApi";
 import CommonUtil from '@/utils/commonUtil'
+import {post} from "@/axios/FetchData";
 
 export default {
   name: 'list',
@@ -141,7 +142,13 @@ export default {
       this.editUser = user
     },
     doEdit() {
-      console.log(this.$refs.upImg);
+      this.$refs.upImg.upload()
+      let data1 = JSON.stringify(this.editUser);
+      console.log(data1);
+      post("/user/update_by_id", data1)
+          .then(res => {
+            console.log(res);
+          });
     }
   },
   created() {

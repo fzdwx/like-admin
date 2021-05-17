@@ -1,28 +1,23 @@
 package cn.like.code.server.business.user.controller;
 
 
-import cn.like.code.server.business.user.pojo.dto.UserDTO;
-import cn.like.code.server.business.user.pojo.query.UserQuery;
-import cn.like.code.server.business.user.service.UserService;
-import com.sika.code.database.common.Page;
+import java.util.List;
 import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
+import cn.like.code.server.business.user.service.UserService;
+import cn.like.code.server.business.user.pojo.dto.UserDTO;
+import cn.like.code.server.business.user.pojo.query.UserQuery;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * <p>
  * 用户表 前端控制器
  * </p>
  *
  * @author like @email:980650920@qq.com
- * @since 2021-05-15 07:37:04
+ * @since 2021-05-17 22:07:51
  */
 @RestController(value = "userController")
 @RequestMapping("user")
@@ -45,15 +40,9 @@ public class UserController extends BaseStandardController {
         return super.success(userService.updateById(userDto));
     }
 
-    @PostMapping(value = "page")
+    @RequestMapping(value = "page")
     public Result page(@RequestBody UserQuery userQuery) {
-        Page<UserDTO> page = userService.page(userQuery);
-        page.setList(page.getList().stream().peek(o->{
-            o.setSalt("");
-            o.setPassword("");
-            o.setOauthPwd("");
-        }).collect(Collectors.toList()));
-        return super.success(page);
+        return super.success(userService.page(userQuery));
     }
 
     @RequestMapping(value = "find")

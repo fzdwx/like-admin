@@ -6,7 +6,7 @@ package cn.like.code.server.business.role.constant;
  * </p>
  *
  * @author like @email:980650920@qq.com
- * @since 2021-05-15 07:37:04
+ * @since 2021-05-17 22:07:52
  */
 public class RoleConstant {
 

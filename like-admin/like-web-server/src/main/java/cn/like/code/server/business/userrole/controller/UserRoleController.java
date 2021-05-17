@@ -12,14 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
 /**
  * <p>
  * 用户和权限关联表 前端控制器
  * </p>
  *
  * @author like @email:980650920@qq.com
- * @since 2021-05-15 07:37:05
+ * @since 2021-05-17 22:07:52
  */
 @RestController(value = "userRoleController")
 @RequestMapping("user_role")

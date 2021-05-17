@@ -1,8 +1,10 @@
 package cn.like.code.server.business.user.mapper;
 
 import cn.like.code.server.business.user.entity.UserEntity;
-import com.sika.code.standard.base.basemapper.BaseStandardMapper;
+import cn.like.code.server.business.user.pojo.query.UserQuery;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+import com.sika.code.standard.base.basemapper.BaseStandardMapper;
 
 /**
  * <p>
@@ -10,9 +12,10 @@ import org.springframework.stereotype.Repository;
  * </p>
  *
  * @author like @email:980650920@qq.com
- * @since 2021-05-15 07:37:04
+ * @since 2021-05-17 22:07:51
  */
 @Repository
 public interface UserMapper extends BaseStandardMapper<UserEntity> {
 
+    Integer updateById(@Param("query") UserQuery query,@Param("query") UserQuery q2);
 }

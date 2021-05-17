@@ -1,8 +1,12 @@
 package cn.like.code.server.controller.api;
 
+import cn.like.code.server.constant.UploadConstant;
+import com.sika.code.common.spring.SpringUtil;
+import com.sika.code.common.util.PropUtil;
 import com.sika.code.standard.auth.properties.AuthProperties;
 import com.sika.code.standard.base.controller.BaseStandardController;
 import com.sika.code.standard.token.util.JwtTokenUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -22,6 +26,9 @@ import java.util.Map;
  */
 @RestController
 public class HelloController extends BaseStandardController {
+
+    @Autowired
+    UploadConstant uploadConstant;
 
     @GetMapping("/hello")
     public String hello() {
@@ -43,7 +50,7 @@ public class HelloController extends BaseStandardController {
 
     private String saveUploadedFiles(final MultipartFile file) throws IOException {
         final byte[] bytes = file.getBytes();
-        final Path path = Paths.get("D:\\Java\\Project\\stduyproject\\like-admin\\ " + file.getOriginalFilename());
+        final Path path = Paths.get( uploadConstant.getImageDir()+ file.getOriginalFilename());
         Files.write(path, bytes);
 
         return "ok";

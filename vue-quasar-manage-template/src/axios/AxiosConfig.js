@@ -33,7 +33,7 @@ service.interceptors.request.use(function (config) {
 
 // 响应拦截器
 service.interceptors.response.use(function (response) {
-    console.log('interceptors.response-------------------' + JSON.stringify(response.headers))
+    // console.log('interceptors.response-------------------' + JSON.stringify(response.headers))
     if (response.headers[localStorageKey.token]) {
         setToken(response.headers[localStorageKey.token])
     }
@@ -88,7 +88,7 @@ function systemError(error) {
 function bizError(result, config) {
     const code = result.code
     const message = result.message
-    if (code === '-1' || '-2' || '-5' || '-4' || '-3') {
+    if (code === '-1' ||code ===  '-2' || code === '-5' ||code ===  '-4' || code === '-3') {
         commonUtil.alert(message).onOk(() => {
             location.href = '/logon'
             clear()

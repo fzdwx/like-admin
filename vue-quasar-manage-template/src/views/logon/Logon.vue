@@ -101,7 +101,6 @@ export default {
           username: this.username, password: this.password
         }
       }).then(res => {
-        console.log("res:" + res);
         commonUtil.notifySuccess('hi  ' + this.username + ' 欢迎回来! ')
         window.location = "/";
       }).catch(error => {

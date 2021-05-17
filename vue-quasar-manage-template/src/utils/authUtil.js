@@ -59,7 +59,6 @@ export function getItem(key) {
     if (isLocalStorageSupported()) {
         let item = LocalStorage.getItem(key);
         if (item != null) {
-            console.log("item:" + item);
             /*let replace = item.replace("__q_strn|", '');
             return replace*/
             return item;

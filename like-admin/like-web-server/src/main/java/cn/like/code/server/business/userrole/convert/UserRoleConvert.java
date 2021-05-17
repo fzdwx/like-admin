@@ -2,10 +2,13 @@ package cn.like.code.server.business.userrole.convert;
 
 import cn.like.code.server.business.userrole.entity.UserRoleEntity;
 import cn.like.code.server.business.userrole.pojo.dto.UserRoleDTO;
+import cn.like.code.server.business.userrole.pojo.query.UserRoleQuery;
 import com.sika.code.standard.base.convert.BaseConvert;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,7 +16,7 @@ import org.mapstruct.factory.Mappers;
  * </p>
  *
  * @author like @email:980650920@qq.com
- * @since 2021-05-15 07:37:05
+ * @since 2021-05-17 22:07:52
  */
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface UserRoleConvert extends BaseConvert<UserRoleEntity, UserRoleDTO> {
@@ -23,5 +26,9 @@ public interface UserRoleConvert extends BaseConvert<UserRoleEntity, UserRoleDTO
      * </p>
      */
     UserRoleConvert INSTANCE = Mappers.getMapper(UserRoleConvert.class);
+
+    UserRoleQuery dtoToQuery(UserRoleDTO dto);
+
+    List<UserRoleDTO> dto2Query(List<UserRoleDTO> dtos);
 
 }

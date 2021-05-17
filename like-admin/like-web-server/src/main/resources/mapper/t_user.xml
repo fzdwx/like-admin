@@ -4,25 +4,25 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="ResultMap" type="cn.like.code.server.business.user.entity.UserEntity">
-        <result column="id" property="id" />
-        <result column="create_by" property="createBy" />
-        <result column="update_by" property="updateBy" />
-        <result column="create_date" property="createDate" />
-        <result column="update_date" property="updateDate" />
-        <result column="version" property="version" />
-        <result column="available" property="available" />
-        <result column="is_deleted" property="isDeleted" />
-        <result column="remark" property="remark" />
-        <result column="username" property="username" />
-        <result column="password" property="password" />
-        <result column="oauth_pwd" property="oauthPwd" />
-        <result column="nickname" property="nickname" />
-        <result column="sex" property="sex" />
-        <result column="phone" property="phone" />
-        <result column="email" property="email" />
-        <result column="avatar" property="avatar" />
-        <result column="salt" property="salt" />
-        <result column="type" property="type" />
+        <result column="id" property="id"/>
+        <result column="create_by" property="createBy"/>
+        <result column="update_by" property="updateBy"/>
+        <result column="create_date" property="createDate"/>
+        <result column="update_date" property="updateDate"/>
+        <result column="version" property="version"/>
+        <result column="available" property="available"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="remark" property="remark"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="oauth_pwd" property="oauthPwd"/>
+        <result column="nickname" property="nickname"/>
+        <result column="sex" property="sex"/>
+        <result column="phone" property="phone"/>
+        <result column="email" property="email"/>
+        <result column="avatar" property="avatar"/>
+        <result column="salt" property="salt"/>
+        <result column="type" property="type"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
@@ -30,84 +30,142 @@
         id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type
     </sql>
 
+    <update id="updateById" parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
+        update `like-admin`.t_user
+        <set>
+            <include refid="query_sql_update"/>
+        </set>
+        where id = #{param1.id}
+    </update>
+
+    <sql id="query_sql_update">
+        <if test="query.id != null">id = #{query.id},</if>
+        <if test="query.userId != null">id = #{query.userId},</if>
+        <if test="query.username != null and query.username !=''">
+            username = #{query.username},
+        </if>
+        <if test="query.password != null and query.password !=''">
+            password = #{query.password},
+        </if>
+        <if test="query.oauthPwd != null and query.oauthPwd !=''">
+            oauth_pwd = #{query.oauthPwd},
+        </if>
+        <if test="query.nickname != null and query.nickname !=''">
+            nickname = #{query.nickname},
+        </if>
+        <if test="query.sex != null and query.sex !=''">
+            sex = #{query.sex},
+        </if>
+        <if test="query.phone != null and query.phone !=''">
+            phone = #{query.phone},
+        </if>
+        <if test="query.email != null and query.email !=''">
+            email = #{query.email},
+        </if>
+        <if test="query.avatar != null and query.avatar !=''">
+            avatar = #{query.avatar},
+        </if>
+        <if test="query.salt != null and query.salt !=''">
+            salt = #{query.salt},
+        </if>
+        <if test="query.type != null and query.type !=''">
+            type = #{query.type},
+        </if>
+        <if test="query.ids != null and query.ids.size() > 0">
+            AND id in
+            <foreach item="item" collection="query.ids" separator="," open="(" close=")" index="">
+                #{item}
+            </foreach>
+        </if>
+    </sql>
+
     <!-- 根据查询条件获取列表信息 -->
-    <select id="listByQuery" resultMap="ResultMap" parameterType="cn.like.code.server.business.user.pojo.query.UserQuery" >
-        SELECT <include refid="columnList" />
+    <select id="listByQuery" resultMap="ResultMap"
+            parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
+        SELECT
+        <include refid="columnList"/>
         FROM t_user
         <where>
             is_deleted = 0
-            <include refid="query_sql" />
+            <include refid="query_sql"/>
         </where>
     </select>
 
     <!-- 根据查询条件获取Id列表信息 -->
-    <select id="listIdByQuery" resultType="java.lang.Long" parameterType="cn.like.code.server.business.user.pojo.query.UserQuery" >
+    <select id="listIdByQuery" resultType="java.lang.Long"
+            parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
         SELECT id
         FROM t_user
         <where>
             is_deleted = 0
-            <include refid="query_sql" />
+            <include refid="query_sql"/>
         </where>
     </select>
 
     <!-- 根据查询条件获取实体信息 -->
-    <select id="findByQuery" resultMap="ResultMap" parameterType="cn.like.code.server.business.user.pojo.query.UserQuery" >
-        SELECT <include refid="columnList" />
+    <select id="findByQuery" resultMap="ResultMap"
+            parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
+        SELECT
+        <include refid="columnList"/>
         FROM t_user
         <where>
             is_deleted = 0
-            <include refid="query_sql" />
+            <include refid="query_sql"/>
         </where>
         LIMIT 1
     </select>
 
     <!-- 根据查询条件获取表id -->
-    <select id="findIdByQuery" resultType="java.lang.Long" parameterType="cn.like.code.server.business.user.pojo.query.UserQuery" >
+    <select id="findIdByQuery" resultType="java.lang.Long"
+            parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
         SELECT id
         FROM t_user
         <where>
             is_deleted = 0
-            <include refid="query_sql" />
+            <include refid="query_sql"/>
         </where>
         LIMIT 1
     </select>
 
     <!-- 根据查询条件获取分页信息 -->
-    <select id="pageByQuery" resultMap="ResultMap" parameterType="cn.like.code.server.business.user.pojo.query.UserQuery" >
-        SELECT <include refid="columnList" />
+    <select id="pageByQuery" resultMap="ResultMap"
+            parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
+        SELECT
+        <include refid="columnList"/>
         FROM t_user
         <where>
             is_deleted = 0
-            <include refid="query_sql" />
+            <include refid="query_sql"/>
         </where>
         <include refid="order_by_sql"/>
         LIMIT #{query.start}, #{query.pageSize}
     </select>
 
     <!-- 根据查询条件获取总数量信息 -->
-    <select id="totalCountByQuery" resultType="Integer" parameterType="cn.like.code.server.business.user.pojo.query.UserQuery" >
+    <select id="totalCountByQuery" resultType="Integer"
+            parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
         SELECT count(*)
         FROM t_user
         <where>
             is_deleted = 0
-            <include refid="query_sql" />
+            <include refid="query_sql"/>
         </where>
     </select>
 
     <!-- 根据查询条件SQL -->
-    <sql id="query_sql" >
+    <sql id="query_sql">
         <if test="query.id != null">AND id = #{query.id}</if>
         <if test="query.userId != null">AND id = #{query.userId}</if>
-        <if test="query.username != null">AND username = #{query.username}</if>
-        <if test="query.password != null">AND password = #{query.password}</if>
-        <if test="query.oauthPwd != null">AND oauth_pwd = #{query.oauthPwd}</if>
-        <if test="query.nickname != null">AND nickname = #{query.nickname}</if>
-        <if test="query.sex != null">AND sex = #{query.sex}</if>
-        <if test="query.phone != null">AND phone = #{query.phone}</if>
-        <if test="query.email != null">AND email = #{query.email}</if>
-        <if test="query.avatar != null">AND avatar = #{query.avatar}</if>
-        <if test="query.salt != null">AND salt = #{query.salt}</if>
-        <if test="query.type != null">AND type = #{query.type}</if>
+        <if test="query.username != null and query.username !=''">AND username = #{query.username}</if>
+        <if test="query.password != null and query.password !=''">AND password = #{query.password}</if>
+        <if test="query.oauthPwd != null and query.oauthPwd !=''">AND oauth_pwd = #{query.oauthPwd}</if>
+        <if test="query.nickname != null and query.nickname !=''">AND nickname = #{query.nickname}</if>
+        <if test="query.sex != null and query.sex !=''">AND sex = #{query.sex}</if>
+        <if test="query.phone != null and query.phone !=''">AND phone = #{query.phone}</if>
+        <if test="query.email != null and query.email !=''">AND email = #{query.email}</if>
+        <if test="query.avatar != null and query.avatar !=''">AND avatar = #{query.avatar}</if>
+        <if test="query.salt != null and query.salt !=''">AND salt = #{query.salt}</if>
+        <if test="query.type != null and query.type !=''">AND type = #{query.type}</if>
         <if test="query.ids != null and query.ids.size() > 0">
             AND id in
             <foreach item="item" collection="query.ids" separator="," open="(" close=")" index="">
@@ -118,7 +176,7 @@
 
     <!-- 排序的sql -->
     <sql id="order_by_sql">
-        <if test="query.sortColumn != null and query.sortType != null" >
+        <if test="query.sortColumn != null and query.sortType != null">
             ORDER BY
             <include refid="order_by_column_sql"/>
             <include refid="order_by_type_sql"/>

@@ -18,9 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Objects;
 
 /**
@@ -92,7 +90,7 @@ public class LoginController extends BaseStandardController {
 
         log.info("[register] 用户注册:{}", userDTO);
 
-        return success(userDTO);
+        return success(userDTO.getUsername());
     }
 
 }

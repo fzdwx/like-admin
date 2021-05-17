@@ -4,6 +4,7 @@ import cn.like.code.server.business.user.convert.UserConvert;
 import cn.like.code.server.business.user.entity.UserEntity;
 import cn.like.code.server.business.user.mapper.UserMapper;
 import cn.like.code.server.business.user.pojo.dto.UserDTO;
+import cn.like.code.server.business.user.pojo.query.UserQuery;
 import cn.like.code.server.business.user.service.UserService;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.sika.code.standard.base.convert.BaseConvert;
@@ -38,6 +39,11 @@ public class UserServiceImpl extends BaseStandardServiceImpl<UserMapper, UserEnt
                 .eq(UserEntity::getPhone, userDTO.getPhone())
                 .or()
                 .eq(UserEntity::getEmail, userDTO.getEmail())) == 0;
+    }
+
+    @Override
+    public Integer updateById(UserQuery dtoToQuery) {
+        return userMapper.updateById(dtoToQuery,dtoToQuery);
     }
 }
 

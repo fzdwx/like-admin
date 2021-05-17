@@ -4,7 +4,8 @@ server:
     accept-count: 1024
     max-threads: 1024
 debug: false
-headImagePath: D:\Java\project\admin\like-admin-ui\public\imgs\head\
+upload:
+  imageDir: D:\Java\project\stduyproject\admin\vue-quasar-manage-template\public\
 sika:
   code:
     workspace:
@@ -24,11 +25,6 @@ sika:
         connectionRequestTimeout: 200
         bufferRequestBody: false
     ## ==========================restTemplate配置end=====================================
-    auth:
-      # jwt秘钥
-      jwt-secret: ETZZN3KX194HXI82
-      server-name: risk-system-server
-      salt: like
     thirdparty:
       url:
         erpRequestDomain: http://erp-service

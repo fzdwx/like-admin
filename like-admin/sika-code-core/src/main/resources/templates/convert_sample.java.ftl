@@ -24,4 +24,8 @@ public interface ${table.classBodyName}Convert extends BaseConvert<${table.entit
      */
     ${table.classBodyName}Convert INSTANCE = Mappers.getMapper(${table.classBodyName}Convert.class);
 
+    ${table.classBodyName}Query dtoToQuery(${table.classBodyName}DTO dto);
+
+    List<${table.classBodyName}DTO> dto2Query(List<${table.classBodyName}DTO> dtos);
+
 }

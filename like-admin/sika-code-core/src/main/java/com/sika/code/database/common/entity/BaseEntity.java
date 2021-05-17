@@ -20,7 +20,7 @@ public class BaseEntity<PRIMARY extends Serializable, BY> {
     private Date createDate;
     private BY updateBy;
     private Date updateDate;
-    @Version
+    // @Version
     private Integer version;
     /**
      * 删除标志

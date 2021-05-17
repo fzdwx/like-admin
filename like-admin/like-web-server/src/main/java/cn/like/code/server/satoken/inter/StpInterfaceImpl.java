@@ -7,6 +7,7 @@ import cn.like.code.server.business.user.service.UserService;
 import cn.like.code.server.business.userrole.entity.UserRoleEntity;
 import cn.like.code.server.business.userrole.service.UserRoleService;
 import com.sika.code.common.util.CollectionUtil;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -50,6 +51,7 @@ public class StpInterfaceImpl implements StpInterface {
      * @return {@link List<String>}
      */
     @Override
+    @Cacheable(value = "permissionCache")
     public List<String> getPermissionList(Object loginId, String loginKey) {
         List<String> permissions;
 
@@ -78,6 +80,7 @@ public class StpInterfaceImpl implements StpInterface {
      * @return {@link List<String>}
      */
     @Override
+    @Cacheable(value = "roleCache")
     public List<String> getRoleList(Object loginId, String loginKey) {
         List<String> roles;
 

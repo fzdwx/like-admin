@@ -1,11 +1,10 @@
 package cn.like.code.server.business.userrole.pojo.dto;
 
+import java.io.Serializable;
 import com.sika.code.standard.base.pojo.dto.BaseStandardDTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-
-import java.io.Serializable;
 
 /**
  * <p>
@@ -13,7 +12,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author like @email:980650920@qq.com
- * @since 2021-05-15 07:37:05
+ * @since 2021-05-17 22:07:52
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
