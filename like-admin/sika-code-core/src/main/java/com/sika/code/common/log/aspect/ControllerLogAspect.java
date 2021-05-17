@@ -32,6 +32,8 @@ import javax.servlet.http.HttpServletRequest;
 @Order(value = 1)
 @Slf4j
 public class ControllerLogAspect {
+    private long start;
+    private long end;
 
     @Pointcut("@annotation(com.sika.code.common.log.annotation.ControllerLog)")
     public void controllerLogMethodCut() {
@@ -43,7 +45,7 @@ public class ControllerLogAspect {
 
     @Around("controllerLogMethodCut()||controllerLogCut()")
     public Object controllerLogRequest(ProceedingJoinPoint pjp) throws Throwable {
-
+        start = System.currentTimeMillis();
         RequestAttributes ra = RequestContextHolder.getRequestAttributes();
         ServletRequestAttributes sra = (ServletRequestAttributes) ra;
         HttpServletRequest request = sra.getRequest();
@@ -67,7 +69,8 @@ public class ControllerLogAspect {
                 } else if (o instanceof Model) {
                     log.info("org.springframework.ui.Model  ---------   " + JSON.toJSONString(o));
                 } else if (o instanceof ServletRequest) {
-                    log.info("ServletRequest ParameterMap  ---------   " + JSON.toJSONString(((ServletRequest) o).getParameterMap()));
+                    log.info("ServletRequest ParameterMap  ---------   " + JSON
+                            .toJSONString(((ServletRequest) o).getParameterMap()));
                 } else if (!(o instanceof BindingResult)) {
                     log.info(String.valueOf(o));
                 }
@@ -85,6 +88,7 @@ public class ControllerLogAspect {
     public Object controllerLogResponse(Object obj) throws Throwable {
         log.info("------------------------  Response Result  ------------------------");
         log.info(JSON.toJSONString(obj));
+        log.info("[request cost {}ms]",System.currentTimeMillis()-start);
         log.info("*****************  Request End  *****************");
         return obj;
     }
