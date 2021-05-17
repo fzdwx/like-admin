@@ -48,8 +48,6 @@
     "echarts": "^4.9.0",
     "webpack-bundle-analyzer": "^4.2.0"
   },
-
-
   "browserslist": [
     "> 1%",
     "last 2 versions",
