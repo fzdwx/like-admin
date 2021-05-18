@@ -239,7 +239,7 @@ public abstract class BaseStandardServiceImpl<M extends BaseStandardMapper<Entit
      * @author daiqi
      * @date 2018/12/3 16:58
      */
-    private <QUERY extends BaseQuery> List<DTO> pageByQuery(QUERY query) {
+    protected  <QUERY extends BaseQuery> List<DTO> pageByQuery(QUERY query) {
         return convertToDTOs(getMapper().pageByQuery(query));
     }
 
@@ -253,7 +253,7 @@ public abstract class BaseStandardServiceImpl<M extends BaseStandardMapper<Entit
      * @author daiqi
      * @date 2018/12/6 11:54
      */
-    private <QUERY extends BaseQuery> int totalCountByQuery(QUERY query) {
+    protected <QUERY extends BaseQuery> int totalCountByQuery(QUERY query) {
         return getMapper().totalCountByQuery(query);
     }
 
@@ -322,7 +322,7 @@ public abstract class BaseStandardServiceImpl<M extends BaseStandardMapper<Entit
         return getBaseMapper();
     }
 
-    private <QUERY extends BaseQuery> void verifyQuery(QUERY query) {
+    protected <QUERY extends BaseQuery> void verifyQuery(QUERY query) {
         Assert.verifyObjNull(query, "查询对象");
     }
 

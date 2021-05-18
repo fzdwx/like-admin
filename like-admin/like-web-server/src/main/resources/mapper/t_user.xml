@@ -146,10 +146,7 @@
             parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
         SELECT count(*)
         FROM t_user
-        <where>
-            is_deleted = 0
-            <include refid="query_sql"/>
-        </where>
+        <include refid="query_sql"/>
     </select>
 
     <!-- 根据查询条件SQL -->

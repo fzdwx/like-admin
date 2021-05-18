@@ -2,9 +2,15 @@
   <base-content>
     <template>
       <!--   表格  -->
-      <div class="q-pa-md">
-        <div>
-          <q-btn label="搜索" @click="loadUsers()"/>
+      <div class="q-ma-md">
+        <div class="row  q-gutter-x-md">
+          <q-input class="col-1" label="用户编码" v-model="query.userId" autofocus/>
+          <q-input class="col-1" label="姓名" v-model="query.username" autofocus/>
+          <!--          <q-input class="col" label="性别" v-model="query.sex" autofocus/>-->
+          <q-input class="col-1" label="手机号码" v-model="query.phone" autofocus/>
+          <!--          <q-input class="col" label="用户类型" v-model="query.type" autofocus/>-->
+          <q-btn icon="search" class="col-1 bg-blue-grey-6  self-center" color="primary" label="搜索" @click="loadUsers()"/>
+          <q-btn icon="clear" class="col-1  self-center text-white btn" label="清除" @click="clearQuery()"/>
         </div>
         <q-markup-table :separator="separator" flat bordered>
           <thead>
@@ -120,8 +126,10 @@ export default {
       },
       editDialog: false,
       editUser: Object,
+      sex: "1",
     }
   },
+  watch: {},
   methods: {
     // 检查文件格式
     check(file) {
@@ -145,17 +153,17 @@ export default {
     },
     // 编辑用户
     edit(user) {
-      this.editDialog = !this.editDialog
-      this.editUser = user
+      this.editDialog = !this.editDialog;
+      this.editUser = user;
     },
     doEdit() {
       let formData = new FormData();
-      formData.append("file",this.file)
-      formData.append("username",this.file)
-      postUpload("/uploadUserImage",formData ).then(res => {
+      formData.append("file", this.file)
+      postUpload("/api/uploadUserImage", formData).then(res => {
         console.log(res);
+        this.file = null
       })
-      post("/user/update_by_id", JSON.stringify(this.editUser))
+      post("/api/user/update_by_id", JSON.stringify(this.editUser))
           .then(res => {
             if (typeof res === "number") {
               if (res > 0) {
@@ -166,6 +174,15 @@ export default {
             }
             this.loadUsers()
           });
+    },
+    clearQuery() {
+      this.query.userId = null
+      this.query.username = null
+      this.query.sex = null
+      this.query.email = null
+      this.query.phone = null
+      this.query.ids = null
+      this.query.type = null
     }
   },
   created() {
@@ -177,6 +194,11 @@ export default {
 
 .btn-table {
   background: linear-gradient(to right, #36d1dc, #5b86e5);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn {
+  background: linear-gradient(to right, #F01388, #F073C8);
   transition: all 0.3s ease-in-out;
 }
 </style>

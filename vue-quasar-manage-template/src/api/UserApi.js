@@ -16,5 +16,5 @@ export function getUserRouter() {
  * @param data
  */
 export function getUserList(data) {
-    return post("/user/page", data);
+    return post("/api/user/page", data);
 }

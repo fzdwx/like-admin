@@ -18,6 +18,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Objects;
 
 /**
  * <p>
@@ -47,6 +48,9 @@ public class ControllerLogAspect {
     public Object controllerLogRequest(ProceedingJoinPoint pjp) throws Throwable {
         start = System.currentTimeMillis();
         RequestAttributes ra = RequestContextHolder.getRequestAttributes();
+        if (Objects.isNull(RequestContextHolder.getRequestAttributes())) {
+            return "null";
+        }
         ServletRequestAttributes sra = (ServletRequestAttributes) ra;
         HttpServletRequest request = sra.getRequest();
 

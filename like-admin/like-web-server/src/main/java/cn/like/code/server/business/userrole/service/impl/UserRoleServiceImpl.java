@@ -5,7 +5,6 @@ import cn.like.code.server.business.userrole.entity.UserRoleEntity;
 import cn.like.code.server.business.userrole.mapper.UserRoleMapper;
 import cn.like.code.server.business.userrole.pojo.dto.UserRoleDTO;
 import cn.like.code.server.business.userrole.service.UserRoleService;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.sika.code.standard.base.convert.BaseConvert;
 import com.sika.code.standard.base.service.impl.BaseStandardServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,8 +34,9 @@ public class UserRoleServiceImpl extends BaseStandardServiceImpl<UserRoleMapper,
     @Override
     public List<UserRoleEntity> listRoleIdByUserId(Long userId) {
         return userRoleMapper.selectList(
-                Wrappers.<UserRoleEntity>lambdaQuery().select(UserRoleEntity::getRoleId)
-                        .eq(UserRoleEntity::getUserId, userId));
+                userRoleMapper.getLambdaQuery()
+                              .select(UserRoleEntity::getRoleId)
+                              .eq(UserRoleEntity::getUserId, userId));
     }
 }
 

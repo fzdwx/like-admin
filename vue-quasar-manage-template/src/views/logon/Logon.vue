@@ -95,7 +95,7 @@ export default {
       this.loading = !this.loading
 
       this.$fetchData({
-        url: '/auth/login',
+        url: '/api/auth/login',
         method: 'post',
         data: {
           username: this.username, password: this.password
