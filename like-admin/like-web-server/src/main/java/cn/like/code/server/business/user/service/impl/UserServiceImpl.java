@@ -42,8 +42,8 @@ public class UserServiceImpl extends BaseStandardServiceImpl<UserMapper, UserEnt
     }
 
     @Override
-    public Integer updateById(UserQuery dtoToQuery) {
-        return userMapper.updateById(dtoToQuery,dtoToQuery);
+    public Integer updateSelectiveById(UserQuery dtoToQuery) {
+        return userMapper.updateSelectiveById(dtoToQuery);
     }
 }
 

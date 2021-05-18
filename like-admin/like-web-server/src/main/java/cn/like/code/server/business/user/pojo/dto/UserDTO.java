@@ -1,10 +1,11 @@
 package cn.like.code.server.business.user.pojo.dto;
 
-import java.io.Serializable;
 import com.sika.code.standard.base.pojo.dto.BaseStandardDTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
 
 /**
  * <p>

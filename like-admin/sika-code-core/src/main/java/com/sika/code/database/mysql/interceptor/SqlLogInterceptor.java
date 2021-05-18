@@ -1,8 +1,8 @@
 package com.sika.code.database.mysql.interceptor;
 
 import cn.hutool.core.util.StrUtil;
-import com.alibaba.fastjson.JSON;
 import com.sika.code.common.date.constant.DateConstant;
+import com.sika.code.common.json.util.JSONUtil;
 import com.sika.code.database.common.util.SqlParserUtil;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -95,7 +95,7 @@ public class SqlLogInterceptor implements Interceptor {
                 } finally {
                     String result = "";
                     if (isJavaClass(obj)) {
-                        result = JSON.toJSONString(obj);
+                        result = JSONUtil.toJson(obj);
                     }
                     endTime = (endTime == 0 ? System.currentTimeMillis() : endTime);
                     long cost = endTime - startTime;
@@ -135,6 +135,13 @@ public class SqlLogInterceptor implements Interceptor {
         }
     }
 
+    /**
+     * 绑定参数到sql
+     *
+     * @param invocation      调用
+     * @param mappedStatement 映射语句
+     * @return {@link String}
+     */
     private String getSql(Invocation invocation, MappedStatement mappedStatement) {
         String sql = getExecuteSql();
 

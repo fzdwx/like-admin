@@ -3,12 +3,18 @@ package com.sika.code.common.json.util;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sika.code.basic.util.BaseUtil;
 import com.sika.code.common.json.config.JsonConfig;
 import com.sika.code.common.json.filter.JsonPropertyFilter;
 import com.sika.code.common.string.util.StringUtil;
 import com.sika.code.common.util.CollectionUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -21,8 +27,61 @@ import java.util.List;
  */
 public class JSONUtil {
 
+    private static Logger logger = LoggerFactory.getLogger(JSONUtil.class);
+    private static ObjectMapper objectMapper = new ObjectMapper();
     static {
+        //静默出现未知属性时的异常
+        objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+        //允许json=""的空字符换入参
+        objectMapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
         new JsonPropertyFilter(JsonConfig.getJsonFilterDTOMap());
+    }
+
+    /**
+     * jackson 实现 - obj转json
+     *
+     * @param object 对象
+     * @return {@link String}
+     */
+    public static String toJson(Object object) {
+        try {
+            return objectMapper.writeValueAsString(object);
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+        return null;
+    }
+
+    /**
+     *  jackson 实现 - json转obj
+     *
+     * @param json  json
+     * @param clazz clazz
+     * @return {@link T}
+     */
+    public static <T> T fromJson(String json, Class<T> clazz) {
+        try {
+            return (T)objectMapper.readValue(json, clazz);
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+        return null;
+    }
+
+    /**
+     * jackson 实现 - json转obj
+     *
+     * @param json json
+     * @param type 类型
+     * @return {@link T}
+     */
+    public static <T> T fromJson(String json, TypeReference<T> type){
+        try {
+            return (T)objectMapper.readValue(json,type);
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+        return null;
     }
 
     /**

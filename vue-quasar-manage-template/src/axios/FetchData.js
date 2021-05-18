@@ -34,5 +34,36 @@ export function post(url, data, config) {
     return fetchData({url, data, method: 'POST'},config);
 }
 
+export function postUpload(url, param, config) {
+    // 这里要把content-type设置为multipard/form-data，同时还要设置boundary
+    const cfg = Object.assign(showNotifyTrue(), config)
+    return _axios({
+        url: url,
+        method: 'post',
+        ...cfg,
+        data: param,
+        headers: {
+            'Content-Type': 'multipart/form-data; boundary = ' + new Date().getTime()
+        }
+    })
+}
+
+// post请求图片流
+export function postForImage(url, param, config) {
+    const cfg = Object.assign(showNotifyTrue, config)
+    return _axios({
+        url: url,
+        method: 'post',
+        ...cfg,
+        responseType: 'arraybuffer',
+        data: param
+    }).then(response => {
+        return 'data:image/png;base64,' + btoa(
+            new Uint8Array(response)
+                .reduce((data, byte) => data + String.fromCharCode(byte), '')
+        )
+    })
+}
+
 
 export default Vue

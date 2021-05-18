@@ -29,8 +29,8 @@
             <td class="text-center q-td--no hover">{{ user.sex }}</td>
             <td class="text-center q-td--no hover">{{ user.phone }}</td>
             <td class="text-center q-td--no hover">{{ user.email }}</td>
-            <td class="text-center q-td--no hover">{{ user.type }}</td>
             <td class="text-center q-td--no hover">{{ user.createDate }}</td>
+            <td class="text-center q-td--no hover">{{ user.type }}</td>
             <td class="text-center q-td--no hover">
               <q-avatar rounded>
                 <img :src="user.avatar">
@@ -68,7 +68,11 @@
               <q-radio color="cyan" v-model="editUser.sex" val="2" label="女"/>
             </div>
             <q-input disable rounded standout="bg-teal text-white" label="用户类别" v-model="editUser.type" autofocus/>
-            <q-uploader ref="upImg" label="上传头像" field-name="file" :filter="check" url="/api/upload"/>
+            <q-file name="file" :filter="check" color="teal" filled v-model="file" label="上传头像">
+              <template v-slot:prepend>
+                <q-icon name="cloud_upload"/>
+              </template>
+            </q-file>
             <q-avatar rounded>
               <q-img :src="editUser.avatar"/>
             </q-avatar>
@@ -88,7 +92,7 @@
 import BaseContent from '../../components/BaseContent/BaseContent'
 import {getUserList} from "@/api/UserApi";
 import CommonUtil from '@/utils/commonUtil'
-import {post} from "@/axios/FetchData";
+import {post, postUpload} from "@/axios/FetchData";
 
 export default {
   name: 'list',
@@ -98,6 +102,7 @@ export default {
       msg: '欢迎！',
       separator: 'horizontal',
       userList: "",
+      file: null,
       query: {
         userId: null,
         username: null,
@@ -134,7 +139,9 @@ export default {
         res.list = null
         Object.assign(this.query, res);
         CommonUtil.hideLoading()
-      })
+      }).catch(e => {
+        CommonUtil.hideLoading()
+      });
     },
     // 编辑用户
     edit(user) {
@@ -142,12 +149,22 @@ export default {
       this.editUser = user
     },
     doEdit() {
-      this.$refs.upImg.upload()
-      let data1 = JSON.stringify(this.editUser);
-      console.log(data1);
-      post("/user/update_by_id", data1)
+      let formData = new FormData();
+      formData.append("file",this.file)
+      formData.append("username",this.file)
+      postUpload("/upload",formData ).then(res => {
+        console.log(res);
+      })
+      post("/user/update_by_id", JSON.stringify(this.editUser))
           .then(res => {
-            console.log(res);
+            if (typeof res === "number") {
+              if (res > 0) {
+                CommonUtil.notifySuccess("修改成功");
+              } else {
+                CommonUtil.notifySuccess("修改失败，请重试");
+              }
+            }
+            this.loadUsers()
           });
     }
   },

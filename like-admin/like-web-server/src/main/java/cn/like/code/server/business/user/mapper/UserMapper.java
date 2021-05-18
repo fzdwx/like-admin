@@ -17,5 +17,5 @@ import com.sika.code.standard.base.basemapper.BaseStandardMapper;
 @Repository
 public interface UserMapper extends BaseStandardMapper<UserEntity> {
 
-    Integer updateById(@Param("query") UserQuery query,@Param("query") UserQuery q2);
+    Integer updateSelectiveById(@Param("query") UserQuery query);
 }

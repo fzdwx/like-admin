@@ -21,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Objects;
 
+import static cn.like.code.server.business.user.constant.UserConstant.SESSION_KEY_AVATAR;
+
 /**
  * loginId对应user表中的id字段
  *
@@ -58,7 +60,7 @@ public class LoginController extends BaseStandardController {
         }
         // 调用 satoken 登录当前用户
         StpUtil.setLoginId(user.getId());
-
+        StpUtil.getSession().set(SESSION_KEY_AVATAR, user.getAvatar());
         SaTokenInfo tokenInfo = StpUtil.getTokenInfo();
 
         log.info("[login] 用户登录成功:{}-{}",username, tokenInfo.getTokenValue());

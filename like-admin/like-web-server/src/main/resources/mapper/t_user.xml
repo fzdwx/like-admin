@@ -30,12 +30,12 @@
         id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type
     </sql>
 
-    <update id="updateById" parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
+    <update id="updateSelectiveById" parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
         update `like-admin`.t_user
         <set>
             <include refid="query_sql_update"/>
         </set>
-        where id = #{param1.id}
+        where id = #{query.userId}
     </update>
 
     <sql id="query_sql_update">

@@ -16,5 +16,5 @@ public interface UserService extends BaseStandardService<UserDTO> {
 
     boolean checkUserInfo(UserDTO userDTO);
 
-    Integer updateById(UserQuery dtoToQuery);
+    Integer updateSelectiveById(UserQuery dtoToQuery);
 }

@@ -1,13 +1,13 @@
 package cn.like.code.server.controller.api;
 
+import cn.dev33.satoken.session.SaSession;
+import cn.dev33.satoken.stp.StpUtil;
+import cn.like.code.server.business.user.pojo.query.UserQuery;
+import cn.like.code.server.business.user.service.UserService;
 import cn.like.code.server.constant.UploadConstant;
-import com.sika.code.common.spring.SpringUtil;
-import com.sika.code.common.util.PropUtil;
-import com.sika.code.standard.auth.properties.AuthProperties;
+import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
-import com.sika.code.standard.token.util.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,8 +17,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Date;
+
+import static cn.like.code.server.business.user.constant.UserConstant.SESSION_KEY_AVATAR;
 
 /**
  * @author like
@@ -29,31 +30,37 @@ public class HelloController extends BaseStandardController {
 
     @Autowired
     UploadConstant uploadConstant;
-
-    @GetMapping("/hello")
-    public String hello() {
-        return "hello";
-    }
-
-    @GetMapping(value = "/api/auth/login")
-    public String login(String user, String password) {
-        Map map = new HashMap();
-        map.put("user", user);
-        map.put("password", password);
-        return JwtTokenUtil.generateToken(map, AuthProperties.jwtSecret);
-    }
+    @Autowired
+    UserService userService;
 
     @PostMapping("/upload")
-    public String handleFileUpload(@RequestPart(value = "file") final MultipartFile uploadfile) throws IOException {
-        return saveUploadedFiles(uploadfile);
+    public Result handleFileUpload(@RequestPart(value = "file") final MultipartFile uploadfile) throws IOException {
+        return success(saveUploadedFiles(uploadfile));
     }
 
     private String saveUploadedFiles(final MultipartFile file) throws IOException {
         final byte[] bytes = file.getBytes();
-        final Path path = Paths.get( uploadConstant.getImageDir()+ file.getOriginalFilename());
+        // TODO: 2021/5/18 type check
+        String type = file.getContentType();
+
+        // image Name
+        String name = file.getOriginalFilename();
+        name = new Date().getTime() + name.substring(file.getOriginalFilename().indexOf('.'));
+        final Path path = Paths
+                .get(uploadConstant.getImageDir() + name);
         Files.write(path, bytes);
 
-        return "ok";
+        // 将用户图片名称保存的session中
+        SaSession session = StpUtil.getSession();
+        String avatarAddr = session.get(SESSION_KEY_AVATAR).toString();
+        String imageName = avatarAddr.replace(uploadConstant.getUserAvatarViewPath(), "");
+        // 删除原来的图片
+        Files.delete(Paths.get(uploadConstant.getImageDir() + imageName));
+        avatarAddr = uploadConstant.getUserAvatarViewPath() + name;
+        session.set(SESSION_KEY_AVATAR, avatarAddr);
+
+        userService.updateSelectiveById(new UserQuery().setAvatar(avatarAddr).setUserId(StpUtil.getLoginIdAsLong()));
+        return name;
     }
 
 }

@@ -10,4 +10,5 @@ package cn.like.code.server.business.user.constant;
  */
 public class UserConstant {
 
+    public static final String SESSION_KEY_AVATAR = "AVATAR";
 }

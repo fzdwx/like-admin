@@ -15,5 +15,9 @@ import org.springframework.stereotype.Component;
 @Data
 public class UploadConstant {
 
+    /** 图片上传地址 */
     private String imageDir;
+
+    /** 用户头像访问地址  http://localhost:8868/image/{imageName} */
+    private String userAvatarViewPath;
 }

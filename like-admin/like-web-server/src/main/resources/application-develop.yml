@@ -5,7 +5,8 @@ server:
     max-threads: 1024
 debug: false
 upload:
-  imageDir: D:\Java\project\stduyproject\admin\vue-quasar-manage-template\public\
+  imageDir: D:\Java\project\stduyproject\like-admin\vue-quasar-manage-template\public\image\
+  userAvatarViewPath: http://localhost:8868/image/
 sika:
   code:
     workspace:
