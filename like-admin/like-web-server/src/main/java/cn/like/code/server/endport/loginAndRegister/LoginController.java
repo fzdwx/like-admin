@@ -12,6 +12,7 @@ import com.google.common.base.Preconditions;
 import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -60,10 +61,12 @@ public class LoginController extends BaseStandardController {
         }
         // 调用 satoken 登录当前用户
         StpUtil.setLoginId(user.getId());
-        StpUtil.getSession().set(SESSION_KEY_AVATAR, user.getAvatar());
+        if (StringUtils.isNotBlank(user.getAvatar())) {
+            StpUtil.getSession().set(SESSION_KEY_AVATAR, user.getAvatar());
+        }
         SaTokenInfo tokenInfo = StpUtil.getTokenInfo();
 
-        log.info("[login] 用户登录成功:{}-{}",username, tokenInfo.getTokenValue());
+        log.info("[login] 用户登录成功:{}-{}", username, tokenInfo.getTokenValue());
         return success(new HashMap<String, Object>() {
             {
                 put(TokenConstant.userRoleName, stpInterface.getRoleList(user.getId(), tokenInfo.getLoginKey()).get(0));

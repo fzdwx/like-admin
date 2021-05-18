@@ -7,6 +7,7 @@ import cn.like.code.server.business.user.service.UserService;
 import cn.like.code.server.constant.UploadConstant;
 import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -52,13 +53,14 @@ public class HelloController extends BaseStandardController {
 
         // 将用户图片名称保存的session中
         SaSession session = StpUtil.getSession();
-        String avatarAddr = session.get(SESSION_KEY_AVATAR).toString();
-        String imageName = avatarAddr.replace(uploadConstant.getUserAvatarViewPath(), "");
-        // 删除原来的图片
-        Files.delete(Paths.get(uploadConstant.getImageDir() + imageName));
+        String avatarAddr = session.get(SESSION_KEY_AVATAR,"").toString();
+        if (StringUtils.isNotBlank(avatarAddr)) {
+            String imageName = avatarAddr.replace(uploadConstant.getUserAvatarViewPath(), "");
+            // 删除原来的图片
+            Files.delete(Paths.get(uploadConstant.getImageDir() + imageName));
+        }
         avatarAddr = uploadConstant.getUserAvatarViewPath() + name;
         session.set(SESSION_KEY_AVATAR, avatarAddr);
-
         userService.updateSelectiveById(new UserQuery().setAvatar(avatarAddr).setUserId(StpUtil.getLoginIdAsLong()));
         return name;
     }

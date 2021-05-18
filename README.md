@@ -7,9 +7,28 @@
 ~~~
 
 
-上传头像
-  
-    约定访问路径问 前端url/image/{userId}
+
+
+
+## 上传头像
+
+    1.约定访问路径问 http://localhost:8868/image/{sign}.jpg  =>http://localhost:8868/image/1621312619057.jpg 
+    2.登陆的时候在session中存放http://localhost:8868/image/1621312619057.jpg
+    3.上传头像=> 删除 userAvatarViewPath + imageName
+    4.保存新的头像名称 userAvatarViewPath + newImageName
+    5.更新session
+    6.更新数据库
+
+### 配置
+
+~~~yml
+upload:
+  imageDir: D:\Java\project\stduyproject\like-admin\vue-quasar-manage-template\public\image\
+  userAvatarViewPath: http://localhost:8868/image/
+~~~
+
+### 前端代码示例  
+
 ~~~js
  let formData = new FormData();
       formData.append("file",this.file)
@@ -17,6 +36,8 @@
         console.log(res);
       })
 ~~~
+### 后端代码示例
+
 ~~~java
     @PostMapping("/upload")
     public String handleFileUpload(@RequestPart(value = "file") final MultipartFile uploadfile) throws IOException {
@@ -48,3 +69,10 @@
             return name;
             }
 ~~~
+
+### todo
+
+~~~
+使用fdfs
+~~~
+
