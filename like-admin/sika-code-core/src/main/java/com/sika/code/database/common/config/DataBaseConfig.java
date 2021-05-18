@@ -4,13 +4,10 @@ import com.baomidou.mybatisplus.core.config.GlobalConfig;
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.baomidou.mybatisplus.core.toolkit.GlobalConfigUtils;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import com.sika.code.basic.constant.PropertyConstant;
-import com.sika.code.database.mysql.interceptor.SqlLogInterceptor;
-import com.sika.code.database.mysql.interceptor.SqlLogInterceptorProperties;
+import com.sika.code.database.mysql.interceptor.MyBatisSqlLogInterceptor;
 import lombok.Data;
-import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +37,7 @@ public class DataBaseConfig {
     @Autowired(required = false)
     private MetaObjectHandler metaObjectHandler;
 
-    @Bean
+   /* @Bean
     @ConditionalOnMissingBean
     public SqlLogInterceptorProperties sqlLogInterceptorProperties() {
         return new SqlLogInterceptorProperties();
@@ -50,6 +47,12 @@ public class DataBaseConfig {
     @ConditionalOnMissingBean
     public SqlLogInterceptor sqlLogInterceptor() {
         return new SqlLogInterceptor().openLog(sqlLogInterceptorProperties().getFire());
+    }*/
+
+    @Bean
+    public MybatisPlusInterceptor mybatisPlusInterceptor() {
+        MyBatisSqlLogInterceptor mybatisPlusInterceptor = new MyBatisSqlLogInterceptor();
+        return mybatisPlusInterceptor;
     }
 
     @Bean
@@ -71,7 +74,7 @@ public class DataBaseConfig {
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
             sessionFactory.setMapperLocations(resolver.getResources(mapperLocations));
-            sessionFactory.setPlugins(new Interceptor[]{sqlLogInterceptor()});
+            sessionFactory.setPlugins(mybatisPlusInterceptor());
             return sessionFactory.getObject();
         } catch (Exception e) {
             e.printStackTrace();

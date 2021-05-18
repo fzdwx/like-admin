@@ -135,7 +135,11 @@
         FROM t_user
         <where>
             is_deleted = 0
-            <include refid="query_sql"/>
+            <if test="query.id != null">AND id = #{query.id}</if>
+            <if test="query.userId != null">AND id = #{query.userId}</if>
+            <if test="query.username != null and query.username !=''">AND username like '%${query.username}%'</if>
+            <if test="query.phone != null and query.phone !=''">AND phone = #{query.phone}</if>
+
         </where>
         <include refid="order_by_sql"/>
         LIMIT #{query.start}, #{query.pageSize}
@@ -146,7 +150,13 @@
             parameterType="cn.like.code.server.business.user.pojo.query.UserQuery">
         SELECT count(*)
         FROM t_user
-        <include refid="query_sql"/>
+        <where>
+            is_deleted = 0
+            <if test="query.id != null">AND id = #{query.id}</if>
+            <if test="query.userId != null">AND id = #{query.userId}</if>
+            <if test="query.username != null and query.username !=''">AND username like '%${query.username}%'</if>
+            <if test="query.phone != null and query.phone !=''">AND phone = #{query.phone}</if>
+        </where>
     </select>
 
     <!-- 根据查询条件SQL -->

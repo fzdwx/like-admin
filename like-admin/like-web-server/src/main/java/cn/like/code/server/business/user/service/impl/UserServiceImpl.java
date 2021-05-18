@@ -61,8 +61,8 @@ public class UserServiceImpl extends BaseStandardServiceImpl<UserMapper, UserEnt
         if (totalCount == 0) {
             users = Lists.newArrayList();
         } else {
+            users = pageByQuery(query);
         }
-        users = pageByQuery(query);
         return new Page<>(query, totalCount, users);
     }
 
