@@ -29,16 +29,16 @@ import static cn.like.code.server.business.user.constant.UserConstant.SESSION_KE
  * @date
  */
 @RestController
-public class HelloController extends BaseStandardController {
+public class UploadController extends BaseStandardController {
 
     @Autowired
     UploadConstant uploadConstant;
     @Autowired
     UserService userService;
 
-    @PostMapping("/upload")
+    @PostMapping("/uploadUserImage")
     @Async
-    public CompletableFuture<Result> handleFileUpload(@RequestPart(value = "file") final MultipartFile uploadfile) throws IOException {
+    public CompletableFuture<Result> uploadUserImage(@RequestPart(value = "file") final MultipartFile uploadfile) throws IOException {
         return CompletableFuture.completedFuture(success(saveUploadedFiles(uploadfile)));
     }
 

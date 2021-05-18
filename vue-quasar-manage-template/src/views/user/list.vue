@@ -152,7 +152,7 @@ export default {
       let formData = new FormData();
       formData.append("file",this.file)
       formData.append("username",this.file)
-      postUpload("/upload",formData ).then(res => {
+      postUpload("/uploadUserImage",formData ).then(res => {
         console.log(res);
       })
       post("/user/update_by_id", JSON.stringify(this.editUser))
