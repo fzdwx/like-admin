@@ -9,6 +9,7 @@ import com.sika.code.result.Result;
 import com.sika.code.standard.base.controller.BaseStandardController;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Date;
+import java.util.concurrent.CompletableFuture;
 
 import static cn.like.code.server.business.user.constant.UserConstant.SESSION_KEY_AVATAR;
 
@@ -35,8 +37,9 @@ public class HelloController extends BaseStandardController {
     UserService userService;
 
     @PostMapping("/upload")
-    public Result handleFileUpload(@RequestPart(value = "file") final MultipartFile uploadfile) throws IOException {
-        return success(saveUploadedFiles(uploadfile));
+    @Async
+    public CompletableFuture<Result> handleFileUpload(@RequestPart(value = "file") final MultipartFile uploadfile) throws IOException {
+        return CompletableFuture.completedFuture(success(saveUploadedFiles(uploadfile)));
     }
 
     private String saveUploadedFiles(final MultipartFile file) throws IOException {
