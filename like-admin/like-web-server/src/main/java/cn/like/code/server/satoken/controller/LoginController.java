@@ -1,4 +1,4 @@
-package cn.like.code.server.endport.loginAndRegister;
+package cn.like.code.server.satoken.controller;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpInterface;

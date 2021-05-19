@@ -852,7 +852,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 19:33:47.301 [http-nio-8101-exec-1] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 19:33:47.301 [http-nio-8101-exec-1] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 19:33:47.710 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 19:33:47.710 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 19:33:47.710 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 19:33:47.710 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 19:33:48.023 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, token, type FROM t_user WHERE is_deleted = 0 AND username = 'like' AND password = '$2a$10$pwi.EIpwbYNjlv3gZVYgs.ii9DiRnOgn0bNC9L9ua9V2lDvB0bs.C' LIMIT 1
@@ -871,7 +872,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 19:34:23.353 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 19:34:23.353 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 19:34:23.482 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 19:34:23.482 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 19:34:23.482 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 19:34:23.482 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 19:34:23.484 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, token, type FROM t_user WHERE is_deleted = 0 AND username = 'like' AND password = '$2a$10$NnaUvRsuOQm6WseS.CEn8O4VSVaZbrjZs9oKtZPYx3Vmnkay4q5wO' LIMIT 1
@@ -890,7 +892,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 19:35:55.862 [http-nio-8101-exec-6] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 19:35:55.862 [http-nio-8101-exec-6] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 19:38:17.194 [http-nio-8101-exec-6] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 19:38:17.194 [http-nio-8101-exec-6] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 19:38:17.194 [http-nio-8101-exec-6] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 19:38:17.195 [http-nio-8101-exec-6] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 19:38:17.198 [http-nio-8101-exec-6] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, token, type FROM t_user WHERE is_deleted = 0 AND username = 'like' AND password = '$2a$10$uNJtNlP5P997iF1kcCcapOTav.yM0uL4rfG9P5Qn5BeUDa3IOiUaW' LIMIT 1
@@ -920,7 +923,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 19:57:59.149 [http-nio-8101-exec-10] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - UserDTO(userId=null, username=like, password=like, oauthPwd=null, nickname=null, sex=null, phone=null, email=null, avatar=null, salt=null, type=null)
 2021-05-15 19:57:59.149 [http-nio-8101-exec-10] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 19:58:00.016 [http-nio-8101-exec-10] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 19:58:00.016 [http-nio-8101-exec-10] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 19:58:00.016 [http-nio-8101-exec-10] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 19:58:00.016 [http-nio-8101-exec-10] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.selectOne
 2021-05-15 19:58:00.086 [http-nio-8101-exec-10] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:69ms】result:"org.apache.ibatis.builder.BuilderException:Error evaluating expression 'ew != null and ew.sqlFirst != null'. Cause: org.apache.ibatis.ognl.OgnlException: sqlFirst [com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: can not use this method for \"getSqlFirst\"]"(start:2021-05-15 19:58:00.016, end:2021-05-15 19:58:00.085)
@@ -934,7 +938,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 19:58:58.173 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - UserDTO(userId=null, username=like, password=like, oauthPwd=null, nickname=null, sex=null, phone=null, email=null, avatar=null, salt=null, type=null)
 2021-05-15 19:58:58.173 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 19:58:58.175 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 19:58:58.175 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 19:58:58.175 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 19:58:58.175 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.selectOne
 2021-05-15 19:58:58.176 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:1ms】result:"org.apache.ibatis.builder.BuilderException:Error evaluating expression 'ew != null and ew.sqlFirst != null'. Cause: org.apache.ibatis.ognl.OgnlException: sqlFirst [com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: can not use this method for \"getSqlFirst\"]"(start:2021-05-15 19:58:58.175, end:2021-05-15 19:58:58.176)
@@ -948,7 +953,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 19:59:06.616 [http-nio-8101-exec-1] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - UserDTO(userId=null, username=like, password=like, oauthPwd=null, nickname=null, sex=null, phone=null, email=null, avatar=null, salt=null, type=null)
 2021-05-15 19:59:06.616 [http-nio-8101-exec-1] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 19:59:13.559 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 19:59:13.559 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 19:59:13.559 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 19:59:13.559 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.selectOne
 2021-05-15 19:59:13.561 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:2ms】result:"org.apache.ibatis.builder.BuilderException:Error evaluating expression 'ew != null and ew.sqlFirst != null'. Cause: org.apache.ibatis.ognl.OgnlException: sqlFirst [com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: can not use this method for \"getSqlFirst\"]"(start:2021-05-15 19:59:13.559, end:2021-05-15 19:59:13.561)
@@ -964,7 +970,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:02:32.309 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - UserDTO(userId=null, username=like, password=like, oauthPwd=null, nickname=null, sex=null, phone=null, email=null, avatar=null, salt=null, type=null)
 2021-05-15 20:02:32.309 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:02:32.435 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:02:32.435 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:02:32.435 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:02:32.435 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.selectCount
 2021-05-15 20:02:32.511 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT COUNT( * ) FROM t_user WHERE (username = 'like' OR phone = null OR email = null)
@@ -981,7 +988,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:03:27.587 [http-nio-8101-exec-6] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - UserDTO(userId=null, username=like, password=like, oauthPwd=null, nickname=null, sex=null, phone=null, email=null, avatar=null, salt=null, type=null)
 2021-05-15 20:03:27.587 [http-nio-8101-exec-6] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:03:27.741 [http-nio-8101-exec-6] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:03:27.741 [http-nio-8101-exec-6] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:03:27.741 [http-nio-8101-exec-6] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:03:27.741 [http-nio-8101-exec-6] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.selectCount
 2021-05-15 20:03:27.782 [http-nio-8101-exec-6] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT COUNT( * ) FROM t_user WHERE (username = 'like' OR phone = null OR email = null)
@@ -998,7 +1006,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:03:53.304 [http-nio-8101-exec-7] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - UserDTO(userId=null, username=like, password=like, oauthPwd=null, nickname=null, sex=null, phone=null, email=null, avatar=null, salt=null, type=null)
 2021-05-15 20:03:53.304 [http-nio-8101-exec-7] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:03:53.473 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:03:53.473 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:03:53.473 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:03:53.474 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.selectCount
 2021-05-15 20:03:53.541 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT COUNT( * ) FROM t_user WHERE (username = 'like' OR phone = null OR email = null)
@@ -1006,7 +1015,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:03:53.559 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
 2021-05-15 20:03:53.559 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 20:03:54.517 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:03:54.517 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:03:54.517 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:03:54.518 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.insert
 2021-05-15 20:03:54.593 [http-nio-8101-exec-7] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:76ms】result:"org.apache.ibatis.reflection.ReflectionException:There is no getter for property named 'token' in 'class cn.like.code.server.business.user.entity.UserEntity'"(start:2021-05-15 20:03:54.517, end:2021-05-15 20:03:54.593)
@@ -1049,7 +1059,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:05:06.668 [http-nio-8101-exec-1] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - UserDTO(userId=null, username=like, password=like, oauthPwd=null, nickname=null, sex=null, phone=null, email=null, avatar=null, salt=null, type=null)
 2021-05-15 20:05:06.668 [http-nio-8101-exec-1] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:05:06.823 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:05:06.823 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:05:06.823 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:05:06.823 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.selectCount
 2021-05-15 20:05:06.984 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT COUNT( * ) FROM t_user WHERE (username = 'like' OR phone = null OR email = null)
@@ -1057,7 +1068,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:05:07.115 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
 2021-05-15 20:05:07.115 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 20:05:07.290 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:05:07.290 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:05:07.290 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:05:07.290 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.insert
 2021-05-15 20:05:07.300 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】INSERT INTO t_user ( username, password, salt ) VALUES ( 'like', '$2a$10$oyz1770KsbXCxl92bPiBLe2/h/JPTz0aR5uc/l.WFOd4rWewzx0.y', '$2a$10$oyz1770KsbXCxl92bPiBLe' )
@@ -1065,7 +1077,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:05:07.317 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
 2021-05-15 20:05:07.317 [http-nio-8101-exec-1] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 20:05:07.323 [http-nio-8101-exec-1] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [register] 用户注册:UserDTO(userId=null, username=like, password=$2a$10$oyz1770KsbXCxl92bPiBLe2/h/JPTz0aR5uc/l.WFOd4rWewzx0.y, oauthPwd=null, nickname=null, sex=null, phone=null, email=null, avatar=null, salt=$2a$10$oyz1770KsbXCxl92bPiBLe, type=null)
+2021-05-15 20:05:07.323 [http-nio-8101-exec-1] INFO  cn.like.code.server.satoken.controller.LoginController - [register] 用户注册:UserDTO(userId=null, username=like, password=$2a$10$oyz1770KsbXCxl92bPiBLe2/h/JPTz0aR5uc/l.WFOd4rWewzx0.y, oauthPwd=null, nickname=null, sex=null, phone=null, email=null, avatar=null, salt=$2a$10$oyz1770KsbXCxl92bPiBLe, type=null)
 2021-05-15 20:05:07.339 [http-nio-8101-exec-1] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 20:05:07.364 [http-nio-8101-exec-1] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"password":"$2a$10$oyz1770KsbXCxl92bPiBLe2/h/JPTz0aR5uc/l.WFOd4rWewzx0.y","salt":"$2a$10$oyz1770KsbXCxl92bPiBLe","username":"like"},"message":"成功","msgNo":"RMN-02-01-210515200507-000001","success":true}
 2021-05-15 20:05:07.364 [http-nio-8101-exec-1] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
@@ -1077,7 +1089,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:05:44.114 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 20:05:44.115 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:05:44.117 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:05:44.117 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:05:44.117 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:05:44.117 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 20:05:44.163 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, token, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
@@ -1095,7 +1108,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:06:33.055 [http-nio-8101-exec-4] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 20:06:33.055 [http-nio-8101-exec-4] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:06:33.083 [http-nio-8101-exec-4] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:06:33.083 [http-nio-8101-exec-4] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:06:33.083 [http-nio-8101-exec-4] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:06:33.083 [http-nio-8101-exec-4] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 20:06:33.192 [http-nio-8101-exec-4] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:108ms】result:"org.apache.ibatis.builder.BuilderException:Error evaluating expression 'query.token != null'. Cause: org.apache.ibatis.ognl.NoSuchPropertyException: cn.like.code.server.business.user.pojo.query.UserQuery.token"(start:2021-05-15 20:06:33.083, end:2021-05-15 20:06:33.191)
@@ -1139,7 +1153,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:07:31.619 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 20:07:31.619 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:07:31.727 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:07:31.727 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:07:31.727 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:07:31.727 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 20:07:31.897 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:55ms】result:"org.apache.ibatis.builder.BuilderException:Error evaluating expression 'query.token != null'. Cause: org.apache.ibatis.ognl.NoSuchPropertyException: cn.like.code.server.business.user.pojo.query.UserQuery.token"(start:2021-05-15 20:07:31.727, end:2021-05-15 20:07:31.782)
@@ -1154,7 +1169,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:08:56.528 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 20:08:56.528 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:08:56.529 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:08:56.529 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:08:56.529 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:08:56.529 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 20:08:56.532 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:2ms】result:"org.apache.ibatis.builder.BuilderException:Error evaluating expression 'query.token != null'. Cause: org.apache.ibatis.ognl.NoSuchPropertyException: cn.like.code.server.business.user.pojo.query.UserQuery.token"(start:2021-05-15 20:08:56.529, end:2021-05-15 20:08:56.531)
@@ -1198,7 +1214,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:10:04.192 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 20:10:04.192 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:10:04.296 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:10:04.296 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:10:04.296 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:10:04.296 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 20:10:04.416 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
@@ -1206,7 +1223,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:10:04.565 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
 2021-05-15 20:10:04.566 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 20:10:04.973 [http-nio-8101-exec-2] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=c338b531-6fad-4eb6-bd91-50db739aa18f, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 20:10:04.973 [http-nio-8101-exec-2] INFO  cn.like.code.server.satoken.controller.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=c338b531-6fad-4eb6-bd91-50db739aa18f, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
 2021-05-15 20:10:04.989 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 20:10:05.022 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":"c338b531-6fad-4eb6-bd91-50db739aa18f","message":"成功","msgNo":"RMN-02-01-210515201004-000001","success":true}
 2021-05-15 20:10:05.022 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
@@ -1238,7 +1255,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:35:32.771 [http-nio-8101-exec-9] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 20:35:32.771 [http-nio-8101-exec-9] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:35:32.774 [http-nio-8101-exec-9] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:35:32.774 [http-nio-8101-exec-9] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:35:32.774 [http-nio-8101-exec-9] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:35:32.775 [http-nio-8101-exec-9] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 20:35:32.798 [http-nio-8101-exec-9] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
@@ -1246,7 +1264,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:35:32.814 [http-nio-8101-exec-9] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
 2021-05-15 20:35:32.815 [http-nio-8101-exec-9] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 20:35:33.251 [http-nio-8101-exec-9] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=013c35f0-5913-4cb4-b9af-187440ef8220, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 20:35:33.251 [http-nio-8101-exec-9] INFO  cn.like.code.server.satoken.controller.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=013c35f0-5913-4cb4-b9af-187440ef8220, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
 2021-05-15 20:35:33.253 [http-nio-8101-exec-9] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 20:35:33.253 [http-nio-8101-exec-9] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":"013c35f0-5913-4cb4-b9af-187440ef8220","message":"成功","msgNo":"RMN-02-01-210515203533-000002","success":true}
 2021-05-15 20:35:33.253 [http-nio-8101-exec-9] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
@@ -1260,7 +1278,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:38:56.284 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 20:38:56.284 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 20:38:56.343 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 20:38:56.343 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 20:38:56.343 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 20:38:56.344 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 20:38:56.359 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
@@ -1268,7 +1287,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 20:38:56.375 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
 2021-05-15 20:38:56.375 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 20:38:57.196 [http-nio-8101-exec-2] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=1e0f9af6-9a56-4242-9f3f-2bce7886ca6c, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 20:38:57.196 [http-nio-8101-exec-2] INFO  cn.like.code.server.satoken.controller.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=1e0f9af6-9a56-4242-9f3f-2bce7886ca6c, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
 2021-05-15 20:38:57.196 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 20:38:57.196 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":"1e0f9af6-9a56-4242-9f3f-2bce7886ca6c","message":"成功","msgNo":"RMN-02-01-210515203857-000003","success":true}
 2021-05-15 20:38:57.197 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
@@ -1308,7 +1327,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:28:05.850 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 22:28:05.850 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 22:28:05.907 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:28:05.907 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 22:28:05.907 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 22:28:05.908 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 22:28:05.973 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
@@ -1376,7 +1396,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:32:24.660 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 22:32:24.660 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 22:32:24.736 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:32:24.736 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 22:32:24.736 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 22:32:24.737 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 22:32:24.816 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
@@ -1384,7 +1405,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:32:24.987 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
 2021-05-15 22:32:24.987 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 22:32:25.272 [http-nio-8101-exec-2] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=bcbb877f-85e7-4d89-ad9e-50414ea70d75, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:32:25.272 [http-nio-8101-exec-2] INFO  cn.like.code.server.satoken.controller.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=bcbb877f-85e7-4d89-ad9e-50414ea70d75, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
 2021-05-15 22:32:25.277 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 22:32:25.307 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"bcbb877f-85e7-4d89-ad9e-50414ea70d75"},"message":"成功","msgNo":"RMN-02-01-210515223225-000001","success":true}
 2021-05-15 22:32:25.307 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
@@ -1396,7 +1417,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:36:40.401 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 22:36:40.401 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 22:36:40.402 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:36:40.402 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 22:36:40.402 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   start_logger:sql日志记录:start_logger   **********************************************
 2021-05-15 22:36:40.402 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 22:36:40.403 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
@@ -1404,7 +1426,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:36:40.407 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - **********************************************   end_logger:sql日志记录:end_logger   **********************************************
 2021-05-15 22:36:40.408 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 22:36:40.630 [http-nio-8101-exec-5] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=c0909a3e-e90e-4358-9f0d-8a63f8c76ace, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:36:40.630 [http-nio-8101-exec-5] INFO  cn.like.code.server.satoken.controller.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=c0909a3e-e90e-4358-9f0d-8a63f8c76ace, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
 2021-05-15 22:36:40.631 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 22:36:40.631 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"c0909a3e-e90e-4358-9f0d-8a63f8c76ace"},"message":"成功","msgNo":"RMN-02-01-210515223640-000002","success":true}
 2021-05-15 22:36:40.631 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
@@ -1442,15 +1464,17 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:37:35.824 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 22:37:35.824 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 22:37:35.874 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:37:35.874 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 22:37:35.874 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ start_logger:sql日志记录:start_logger ]   ===============
 2021-05-15 22:37:35.874 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
-2021-05-15 22:37:35.959 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】 SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
+2021-05-15 22:37:35.959 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】
+ SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
 2021-05-15 22:37:36.245 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:215ms】(start:2021-05-15 22:37:35.873, end:2021-05-15 22:37:36.088)
 2021-05-15 22:37:36.246 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ end_logger:sql日志记录:end_logger ]   ===============
 2021-05-15 22:37:36.246 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 22:37:36.585 [http-nio-8101-exec-2] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=47ff2335-ac39-4c45-af12-84634049d026, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:37:36.585 [http-nio-8101-exec-2] INFO  cn.like.code.server.satoken.controller.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=47ff2335-ac39-4c45-af12-84634049d026, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
 2021-05-15 22:37:36.589 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 22:37:36.627 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"47ff2335-ac39-4c45-af12-84634049d026"},"message":"成功","msgNo":"RMN-02-01-210515223736-000001","success":true}
 2021-05-15 22:37:36.627 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
@@ -1462,15 +1486,17 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:38:53.286 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 22:38:53.286 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 22:38:53.287 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:38:53.287 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 22:38:53.287 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ start_logger:sql日志记录:start_logger ]   ===============
 2021-05-15 22:38:53.287 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
-2021-05-15 22:38:53.288 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】 SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
+2021-05-15 22:38:53.288 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】
+ SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
 2021-05-15 22:38:53.295 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Cost:8ms】(start:2021-05-15 22:38:53.287, end:2021-05-15 22:38:53.295)
 2021-05-15 22:38:53.295 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ end_logger:sql日志记录:end_logger ]   ===============
 2021-05-15 22:38:53.295 [http-nio-8101-exec-5] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 22:38:53.535 [http-nio-8101-exec-5] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=5089cf3a-3cd5-4392-a102-0c2c16205826, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:38:53.535 [http-nio-8101-exec-5] INFO  cn.like.code.server.satoken.controller.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=5089cf3a-3cd5-4392-a102-0c2c16205826, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
 2021-05-15 22:38:53.537 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 22:38:53.537 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"5089cf3a-3cd5-4392-a102-0c2c16205826"},"message":"成功","msgNo":"RMN-02-01-210515223853-000002","success":true}
 2021-05-15 22:38:53.537 [http-nio-8101-exec-5] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
@@ -1508,7 +1534,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:41:11.665 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 22:41:11.665 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 22:41:11.723 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:41:11.723 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 22:41:11.723 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ start_logger:sql日志记录:start_logger ]   ===============
 2021-05-15 22:41:11.723 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 22:41:11.816 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】 SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
@@ -1516,7 +1543,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:41:11.989 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ end_logger:sql日志记录:end_logger ]   ===============
 2021-05-15 22:41:11.989 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 22:41:12.397 [http-nio-8101-exec-2] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=794da355-5192-45f5-8ed0-b8ffc4d233b6, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:41:12.397 [http-nio-8101-exec-2] INFO  cn.like.code.server.satoken.controller.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=794da355-5192-45f5-8ed0-b8ffc4d233b6, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
 2021-05-15 22:41:12.402 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 22:41:12.424 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"794da355-5192-45f5-8ed0-b8ffc4d233b6"},"message":"成功","msgNo":"RMN-02-01-210515224112-000001","success":true}
 2021-05-15 22:41:12.424 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
@@ -1606,7 +1633,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:52:01.489 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 22:52:01.489 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 22:52:01.556 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:52:01.556 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 22:52:01.556 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ start_logger:sql日志记录:start_logger ]   ===============
 2021-05-15 22:52:01.557 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 22:52:01.643 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
@@ -1614,7 +1642,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:52:01.827 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ end_logger:sql日志记录:end_logger ]   ===============
 2021-05-15 22:52:01.827 [http-nio-8101-exec-2] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 22:52:02.201 [http-nio-8101-exec-2] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=cb442ac3-ca8e-45b7-b821-1cfe7b2c18ec, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:52:02.201 [http-nio-8101-exec-2] INFO  cn.like.code.server.satoken.controller.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=cb442ac3-ca8e-45b7-b821-1cfe7b2c18ec, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
 2021-05-15 22:52:02.207 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 22:52:02.232 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"cb442ac3-ca8e-45b7-b821-1cfe7b2c18ec"},"message":"成功","msgNo":"RMN-02-01-210515225202-000001","success":true}
 2021-05-15 22:52:02.232 [http-nio-8101-exec-2] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
@@ -1626,7 +1654,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:52:09.817 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - like
 2021-05-15 22:52:09.818 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - 
 
-2021-05-15 22:52:09.818 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+2021-05-15 22:52:09.818 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
+
 2021-05-15 22:52:09.818 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ start_logger:sql日志记录:start_logger ]   ===============
 2021-05-15 22:52:09.818 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - method:cn.like.code.server.business.user.mapper.UserMapper.findByQuery
 2021-05-15 22:52:09.821 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 【Execute Sql】SELECT id, create_by, update_by, create_date, update_date, version, available, is_deleted, remark, username, password, oauth_pwd, nickname, sex, phone, email, avatar, salt, type FROM t_user WHERE is_deleted = 0 AND username = 'like' LIMIT 1
@@ -1634,7 +1663,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2021-05-15 22:52:09.837 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - ===============  [ end_logger:sql日志记录:end_logger ]   ===============
 2021-05-15 22:52:09.837 [http-nio-8101-exec-3] INFO  com.sika.code.database.mysql.interceptor.SqlLogInterceptor - 
 
-2021-05-15 22:52:10.335 [http-nio-8101-exec-3] INFO  cn.like.code.server.endport.loginAndRegister.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=4d4ec7b0-7c35-46ea-9621-626b9406bc43, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
+2021-05-15 22:52:10.335 [http-nio-8101-exec-3] INFO  cn.like.code.server.satoken.controller.LoginController - [login] 用户登录成功:SaTokenInfo [tokenName=like-admin, tokenValue=4d4ec7b0-7c35-46ea-9621-626b9406bc43, isLogin=true, loginId=1, loginKey=login, tokenTimeout=2592000, sessionTimeout=2592000, tokenSessionTimeout=-2, tokenActivityTimeout=-1, loginDevice=default-device]
 2021-05-15 22:52:10.337 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - ------------------------  Response Result  ------------------------
 2021-05-15 22:52:10.337 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - {"code":"BASE_000000","data":{"isLogin":true,"loginDevice":"default-device","loginId":"1","loginKey":"login","sessionTimeout":2592000,"tokenActivityTimeout":-1,"tokenName":"like-admin","tokenSessionTimeout":-2,"tokenTimeout":2592000,"tokenValue":"4d4ec7b0-7c35-46ea-9621-626b9406bc43"},"message":"成功","msgNo":"RMN-02-01-210515225210-000002","success":true}
 2021-05-15 22:52:10.337 [http-nio-8101-exec-3] INFO  com.sika.code.common.log.aspect.ControllerLogAspect - *****************  Request End  *****************
