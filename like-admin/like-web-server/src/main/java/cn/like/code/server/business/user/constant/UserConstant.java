@@ -10,5 +10,10 @@ package cn.like.code.server.business.user.constant;
  */
 public class UserConstant {
 
+    /** session 中保存的用户avatar */
     public static final String SESSION_KEY_AVATAR = "AVATAR";
+    /** session 中保存的用户权限 */
+    public static final String SESSION_KEY_ROLES = "ROLES";
+    /** session 中保存的用户角色 */
+    public static final String SESSION_KEY_PERMISSIONS = "PERMISSIONS";
 }
