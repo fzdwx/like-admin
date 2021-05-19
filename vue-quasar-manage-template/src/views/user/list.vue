@@ -157,12 +157,14 @@ export default {
       this.editUser = user;
     },
     doEdit() {
-      let formData = new FormData();
-      formData.append("file", this.file)
-      postUpload("/api/uploadUserImage", formData).then(res => {
-        console.log(res);
-        this.file = null
-      })
+      if (this.file != null) {
+        let formData = new FormData();
+        formData.append("file", this.file)
+        postUpload("/api/uploadUserImage", formData).then(res => {
+          console.log(res);
+          this.file = null
+        })
+      }
       post("/api/user/update_by_id", JSON.stringify(this.editUser))
           .then(res => {
             if (typeof res === "number") {
